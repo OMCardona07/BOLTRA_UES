@@ -16,7 +16,7 @@ namespace BOLTRA_UES.Interfaz
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmLogin());
+            Application.Run(new FrmPrincipalA());
         }
     }
 }

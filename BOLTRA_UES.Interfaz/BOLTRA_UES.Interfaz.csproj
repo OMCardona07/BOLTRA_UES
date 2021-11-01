@@ -37,8 +37,10 @@
       <HintPath>..\..\..\..\Desktop\Bunifu UI\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -57,6 +59,18 @@
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPrincipalA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrincipalA.Designer.cs">
+      <DependentUpon>FrmPrincipalA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrincipalAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrincipalAdmin.Designer.cs">
+      <DependentUpon>FrmPrincipalAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRegistroA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +81,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrincipalA.resx">
+      <DependentUpon>FrmPrincipalA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrincipalAdmin.resx">
+      <DependentUpon>FrmPrincipalAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistroA.resx">
       <DependentUpon>FrmRegistroA.cs</DependentUpon>
