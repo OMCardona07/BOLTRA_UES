@@ -42,3 +42,6 @@ C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\bin\Debug\Microsoft.Vi
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_UES.Interfaz.FrmPrincipalA.resources
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_UES.Interfaz.FrmPrincipalAdmin.resources
+C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_UES.Interfaz.FrmSuccess.resources
+C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_UES.Interfaz.FrmWarning.resources
+C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_UES.Interfaz.FrmError.resources
