@@ -1,0 +1,6 @@
+C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.EN\bin\Debug\BOLTRA_UES.EN.dll
+C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.EN\bin\Debug\BOLTRA_UES.EN.pdb
+C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.EN\obj\Debug\BOLTRA_UES.EN.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.EN\obj\Debug\BOLTRA_UES.EN.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.EN\obj\Debug\BOLTRA_UES.EN.dll
+C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.EN\obj\Debug\BOLTRA_UES.EN.pdb
