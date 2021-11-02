@@ -55,6 +55,7 @@ namespace BOLTRA_UES.Interfaz
         {
             BotonSelect((Bunifu.Framework.UI.BunifuFlatButton)sender);
             SeguirBoton((Bunifu.Framework.UI.BunifuFlatButton)sender);
+            AbrirFormularioEnWrapper(new FrmBuscarOfer());
         }
 
         private void btnPostulacion_Click(object sender, EventArgs e)
@@ -69,5 +70,36 @@ namespace BOLTRA_UES.Interfaz
             SeguirBoton((Bunifu.Framework.UI.BunifuFlatButton)sender);
         }
         //-----------------------------------------------------------------//
+
+        private Form formActivado = new FrmBuscarOfer();
+
+        private void AbrirFormularioEnWrapper(Form FormHijo)
+        {
+            if(formActivado != null)
+            {
+                formActivado.Close();
+            }
+              
+            formActivado = FormHijo;
+            FormHijo.TopLevel = false;
+            FormHijo.Dock = DockStyle.Fill;
+            wrapper.Controls.Add(FormHijo);
+            wrapper.Tag = FormHijo;
+            FormHijo.BringToFront();
+            FormHijo.Show();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = new DialogResult();
+            Form mensaje = new FrmWarning("¿ESTA SEGURO QUE QUIERE\n" + "SALIR DE LA APLICACION?");
+            resultado = mensaje.ShowDialog();
+
+            if (resultado == DialogResult.OK)
+            {
+                Application.Exit();
+                this.Hide();
+            }
+        }
     }
 }
