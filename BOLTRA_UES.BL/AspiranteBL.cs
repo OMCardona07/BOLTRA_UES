@@ -15,5 +15,10 @@ namespace BOLTRA_UES.BL
         {
             return DAL.AgregarAspirante(pAspirante);
         }
+
+        public int BuscarAspirante(string usuario)
+        {
+            return DAL.ObtenerPorUsuario(usuario);
+        }
     }
 }

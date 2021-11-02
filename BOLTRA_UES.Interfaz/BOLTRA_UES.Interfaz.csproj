@@ -65,6 +65,12 @@
     <Compile Include="FrmEmpleo.Designer.cs">
       <DependentUpon>FrmEmpleo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmpresa.Designer.cs">
+      <DependentUpon>FrmEmpresa.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmError.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,10 @@
     <ProjectReference Include="..\BOLTRA_UES.BL\BOLTRA_UES.BL.csproj">
       <Project>{e83afe89-b901-41c1-9bdc-e5a3a3f62da4}</Project>
       <Name>BOLTRA_UES.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BOLTRA_UES.DAL\BOLTRA_UES.DAL.csproj">
+      <Project>{d8997e81-2d06-40d1-8c3f-9dcce88b759d}</Project>
+      <Name>BOLTRA_UES.DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\BOLTRA_UES.EN\BOLTRA_UES.EN.csproj">
       <Project>{4bcd408a-b9ab-4b62-8fcb-3e6ed654aa2e}</Project>
