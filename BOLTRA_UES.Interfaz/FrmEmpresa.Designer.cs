@@ -29,11 +29,12 @@ namespace BOLTRA_UES.Interfaz
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEmpresa));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
@@ -50,12 +51,12 @@ namespace BOLTRA_UES.Interfaz
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtRubro = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.radioElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -78,17 +79,6 @@ namespace BOLTRA_UES.Interfaz
             this.panel1.Size = new System.Drawing.Size(933, 58);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(55, 45);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -100,6 +90,17 @@ namespace BOLTRA_UES.Interfaz
             this.label1.TabIndex = 1;
             this.label1.Text = "FORMULARIO DE EMPRESAS";
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(55, 45);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -147,7 +148,7 @@ namespace BOLTRA_UES.Interfaz
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.tablaEmpresas.DefaultCellStyle = dataGridViewCellStyle1;
-            this.tablaEmpresas.Location = new System.Drawing.Point(14, 132);
+            this.tablaEmpresas.Location = new System.Drawing.Point(12, 132);
             this.tablaEmpresas.Name = "tablaEmpresas";
             this.tablaEmpresas.ReadOnly = true;
             this.tablaEmpresas.Size = new System.Drawing.Size(468, 244);
@@ -303,9 +304,9 @@ namespace BOLTRA_UES.Interfaz
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(559, 106);
+            this.pictureBox4.Location = new System.Drawing.Point(532, 106);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(285, 35);
+            this.pictureBox4.Size = new System.Drawing.Size(146, 35);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 9;
             this.pictureBox4.TabStop = false;
@@ -314,7 +315,7 @@ namespace BOLTRA_UES.Interfaz
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(559, 84);
+            this.label2.Location = new System.Drawing.Point(532, 84);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 16);
             this.label2.TabIndex = 10;
@@ -324,7 +325,7 @@ namespace BOLTRA_UES.Interfaz
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(556, 161);
+            this.label3.Location = new System.Drawing.Point(529, 155);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 16);
             this.label3.TabIndex = 11;
@@ -334,7 +335,7 @@ namespace BOLTRA_UES.Interfaz
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(556, 241);
+            this.label4.Location = new System.Drawing.Point(529, 226);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 16);
             this.label4.TabIndex = 12;
@@ -344,7 +345,7 @@ namespace BOLTRA_UES.Interfaz
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(556, 321);
+            this.label5.Location = new System.Drawing.Point(529, 302);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(110, 16);
             this.label5.TabIndex = 13;
@@ -353,9 +354,9 @@ namespace BOLTRA_UES.Interfaz
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(559, 180);
+            this.pictureBox5.Location = new System.Drawing.Point(532, 174);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(285, 35);
+            this.pictureBox5.Size = new System.Drawing.Size(348, 35);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 14;
             this.pictureBox5.TabStop = false;
@@ -363,9 +364,9 @@ namespace BOLTRA_UES.Interfaz
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(559, 264);
+            this.pictureBox6.Location = new System.Drawing.Point(532, 249);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(285, 35);
+            this.pictureBox6.Size = new System.Drawing.Size(348, 35);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 15;
             this.pictureBox6.TabStop = false;
@@ -373,68 +374,59 @@ namespace BOLTRA_UES.Interfaz
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(559, 340);
+            this.pictureBox7.Location = new System.Drawing.Point(532, 321);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(285, 53);
+            this.pictureBox7.Size = new System.Drawing.Size(348, 72);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 16;
             this.pictureBox7.TabStop = false;
             this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(260, 219);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(413, 13);
-            this.textBox1.TabIndex = 17;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // txtCodigo
             // 
             this.txtCodigo.BackColor = System.Drawing.Color.White;
             this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCodigo.Location = new System.Drawing.Point(567, 118);
+            this.txtCodigo.Location = new System.Drawing.Point(540, 118);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(270, 13);
+            this.txtCodigo.Size = new System.Drawing.Size(123, 13);
             this.txtCodigo.TabIndex = 18;
             // 
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.Color.White;
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNombre.Location = new System.Drawing.Point(567, 191);
+            this.txtNombre.Location = new System.Drawing.Point(540, 185);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(270, 13);
+            this.txtNombre.Size = new System.Drawing.Size(320, 13);
             this.txtNombre.TabIndex = 19;
             // 
             // txtRubro
             // 
             this.txtRubro.BackColor = System.Drawing.Color.White;
             this.txtRubro.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtRubro.Location = new System.Drawing.Point(567, 275);
+            this.txtRubro.Location = new System.Drawing.Point(540, 260);
             this.txtRubro.Name = "txtRubro";
-            this.txtRubro.Size = new System.Drawing.Size(270, 13);
+            this.txtRubro.Size = new System.Drawing.Size(320, 13);
             this.txtRubro.TabIndex = 20;
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.Color.White;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Location = new System.Drawing.Point(331, 219);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(270, 13);
-            this.textBox5.TabIndex = 21;
             // 
             // txtDescripcion
             // 
             this.txtDescripcion.BackColor = System.Drawing.Color.White;
             this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDescripcion.Location = new System.Drawing.Point(567, 363);
+            this.txtDescripcion.Location = new System.Drawing.Point(540, 344);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(270, 13);
+            this.txtDescripcion.Size = new System.Drawing.Size(320, 13);
             this.txtDescripcion.TabIndex = 22;
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.TargetControl = this;
+            // 
+            // radioElipse
+            // 
+            this.radioElipse.ElipseRadius = 7;
+            this.radioElipse.TargetControl = this;
             // 
             // FrmEmpresa
             // 
@@ -443,11 +435,9 @@ namespace BOLTRA_UES.Interfaz
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(933, 450);
             this.Controls.Add(this.txtDescripcion);
-            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.txtRubro);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtCodigo);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
@@ -505,11 +495,11 @@ namespace BOLTRA_UES.Interfaz
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtRubro;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox txtDescripcion;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.Framework.UI.BunifuElipse radioElipse;
     }
 }
