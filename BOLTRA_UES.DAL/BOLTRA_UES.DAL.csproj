@@ -87,6 +87,7 @@
   <ItemGroup>
     <Compile Include="AspiranteDAL.cs" />
     <Compile Include="BDComun.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="EmpresasDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
