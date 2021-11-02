@@ -32,9 +32,13 @@ namespace BOLTRA_UES.Interfaz
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+#pragma warning disable CS0219 // La variable 'datosUsuario' está asignada pero su valor nunca se usa
             AspiranteEN datosUsuario = null;
+#pragma warning restore CS0219 // La variable 'datosUsuario' está asignada pero su valor nunca se usa
             BDComun conexion = new BDComun();
+#pragma warning disable CS0168 // La variable 'aspirante' se ha declarado pero nunca se usa
             string aspirante;
+#pragma warning restore CS0168 // La variable 'aspirante' se ha declarado pero nunca se usa
 
             if(txtUser.Text != null && txtUser.Text != null && cbCredencial.Text != null)
             {

@@ -4,3 +4,8 @@ C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.EN\obj\Debug\BOLTRA_UES.EN.cspr
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.EN\obj\Debug\BOLTRA_UES.EN.csproj.CoreCompileInputs.cache
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.EN\obj\Debug\BOLTRA_UES.EN.dll
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.EN\obj\Debug\BOLTRA_UES.EN.pdb
+C:\Users\SophieMH\Source\Repos\BOLTRA_UES\BOLTRA_UES.EN\bin\Debug\BOLTRA_UES.EN.dll
+C:\Users\SophieMH\Source\Repos\BOLTRA_UES\BOLTRA_UES.EN\bin\Debug\BOLTRA_UES.EN.pdb
+C:\Users\SophieMH\Source\Repos\BOLTRA_UES\BOLTRA_UES.EN\obj\Debug\BOLTRA_UES.EN.csproj.CoreCompileInputs.cache
+C:\Users\SophieMH\Source\Repos\BOLTRA_UES\BOLTRA_UES.EN\obj\Debug\BOLTRA_UES.EN.dll
+C:\Users\SophieMH\Source\Repos\BOLTRA_UES\BOLTRA_UES.EN\obj\Debug\BOLTRA_UES.EN.pdb

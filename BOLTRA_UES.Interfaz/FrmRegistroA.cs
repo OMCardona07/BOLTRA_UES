@@ -14,8 +14,12 @@ namespace BOLTRA_UES.Interfaz
 {
     public partial class FrmRegistroA : Form
     {
+#pragma warning disable CS0414 // El campo 'FrmRegistroA.dui' está asignado pero su valor nunca se usa
         string dui = "";
+#pragma warning restore CS0414 // El campo 'FrmRegistroA.dui' está asignado pero su valor nunca se usa
+#pragma warning disable CS0414 // El campo 'FrmRegistroA.tel' está asignado pero su valor nunca se usa
         string tel = "";
+#pragma warning restore CS0414 // El campo 'FrmRegistroA.tel' está asignado pero su valor nunca se usa
         public FrmRegistroA()
         {
             InitializeComponent();
