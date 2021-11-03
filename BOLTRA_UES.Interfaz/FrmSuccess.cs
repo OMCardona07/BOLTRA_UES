@@ -16,5 +16,16 @@ namespace BOLTRA_UES.Interfaz
         {
             InitializeComponent();
         }
+
+        private void FrmSuccess_Load(object sender, EventArgs e)
+        {
+            esclarecerForm.ShowAsyc(this);
+            esclarecerForm.Delay = Convert.ToInt32(0.5);
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
     }
 }

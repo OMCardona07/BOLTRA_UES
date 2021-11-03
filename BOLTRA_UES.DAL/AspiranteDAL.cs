@@ -32,48 +32,54 @@ namespace BOLTRA_UES.DAL
             }
         }
 
-        public AspiranteEN ObtenerPorUsuario(string usuario)
+        public int BuscarAspirante(string pUsuario, string pPass)
         {
-            AspiranteEN obj = new AspiranteEN();
-
+            int resultado;
             BDComun Conexion = new BDComun();
 
             MySqlDataReader reader;
             MySqlConnection conexion = Conexion.establecerConxion();
-            conexion.Open();
+            //conexion.Open();
 
             string sql = "SELECT nombres, apellidos, dui, fechaN, userN, pass," +
-                "tipoUser, genero, estadoC, telefono, direccion FROM Aspirante WHERE userN LIKE @usuario";
+                "tipoUser, genero, estadoC, telefono, direccion FROM Aspirante WHERE userN= @usuario and pass=  @pass";
+
             MySqlCommand comando = new MySqlCommand(sql, conexion);
-            comando.Parameters.AddWithValue("@usuario", usuario);
-
+            comando.Parameters.AddWithValue("@usuario", pUsuario);
+            comando.Parameters.AddWithValue("@pass", pPass);
             reader = comando.ExecuteReader();
+            AspiranteEN asp = new AspiranteEN();
 
-            while (reader.Read())
+            if (reader.Read())
             {
-                obj.nombres = reader["nombres"].ToString();
-                obj.apellidos = reader["apellidos"].ToString();
-                obj.dui = reader["dui"].ToString();
-                obj.fechaN = reader["fechaN"].ToString();
-                obj.userN = reader["userN"].ToString();
-                obj.pass = reader["pass"].ToString();
-                obj.tipoUser = reader["tipoUser"].ToString();
-                obj.genero = reader["genero"].ToString();
-                obj.estadoC = reader["estadoC"].ToString();
-                obj.telefono = reader["telefono"].ToString();
-                obj.direccion = reader["direccion"].ToString();
+                resultado = 1;
+
             }
-            return obj;
+            else
+            {
+                resultado = 0;
+            }
+            conexion.Close();
+            return resultado;
         }
 
-        public AspiranteEN ObtenerAspirantePorId(string pIdAspirante)
+        public AspiranteEN ObtenerAspiranteNombreUsu(string pUsuario, string pPass)
         {
             AspiranteEN obj = new AspiranteEN();
+            BDComun Conexion = new BDComun();
 
-            BDComun conexion = new BDComun();
+            MySqlDataReader reader;
+            MySqlConnection conexion = Conexion.establecerConxion();
+            //conexion.Open();
 
-            MySqlCommand comando = new MySqlCommand(string.Format("SELECT * FORM Aspirante WHERE dui={0})", pIdAspirante), conexion.establecerConxion());
-            MySqlDataReader reader = comando.ExecuteReader();
+            string sql = "SELECT nombres, apellidos, dui, fechaN, userN, pass," +
+                "tipoUser, genero, estadoC, telefono, direccion FROM Aspirante WHERE userN= @usuario and pass=  @pass";
+
+            MySqlCommand comando = new MySqlCommand(sql, conexion);
+            comando.Parameters.AddWithValue("@usuario", pUsuario);
+            comando.Parameters.AddWithValue("@pass", pPass);
+            reader = comando.ExecuteReader();
+
 
             while (reader.Read())
             {
@@ -90,6 +96,44 @@ namespace BOLTRA_UES.DAL
                 obj.direccion = reader.GetString(10);
             }
             return obj;
+        }
+
+        public bool Loging(string pUsuario, string pPass)
+        {
+            BDComun Conexion = new BDComun();
+
+            MySqlDataReader reader;
+            MySqlConnection conexion = Conexion.establecerConxion();
+            //conexion.Open();
+
+            string sql = "SELECT nombres, apellidos, dui, fechaN, userN, pass," +
+                "tipoUser, genero, estadoC, telefono, direccion FROM Aspirante WHERE userN= @usuario and pass=  @pass";
+
+            MySqlCommand comando = new MySqlCommand(sql, conexion);
+            comando.Parameters.AddWithValue("@usuario", pUsuario);
+            comando.Parameters.AddWithValue("@pass", pPass);
+            reader = comando.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    Session.nombres = reader.GetString(0);
+                    Session.apellidos = reader.GetString(1);
+                    Session.dui = reader.GetString(2);
+                    Session.fechaN = reader.GetString(3);
+                    Session.userN = reader.GetString(4);
+                    Session.pass = reader.GetString(5);
+                    Session.tipoUser = reader.GetString(6);
+                    Session.genero = reader.GetString(7);
+                    Session.estadoC = reader.GetString(8);
+                    Session.telefono = reader.GetString(9);
+                    Session.direccion = reader.GetString(10);
+                }
+                return true;
+            }
+            else
+                return false;
         }
     }
 }

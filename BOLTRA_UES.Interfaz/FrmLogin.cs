@@ -23,6 +23,7 @@ namespace BOLTRA_UES.Interfaz
         AspiranteEN _aspirante = new AspiranteEN();
         AspiranteBL _aspiranteBL = new AspiranteBL();
 
+
         private void btnRegistroA_Click(object sender, EventArgs e)
         {
             FrmRegistroA frm = new FrmRegistroA();
@@ -30,19 +31,33 @@ namespace BOLTRA_UES.Interfaz
             frm.ShowDialog();
         }
 
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
-#pragma warning disable CS0219 // La variable 'datosUsuario' está asignada pero su valor nunca se usa
-            AspiranteEN datosUsuario = null;
-#pragma warning restore CS0219 // La variable 'datosUsuario' está asignada pero su valor nunca se usa
-            BDComun conexion = new BDComun();
-#pragma warning disable CS0168 // La variable 'aspirante' se ha declarado pero nunca se usa
-            string aspirante;
-#pragma warning restore CS0168 // La variable 'aspirante' se ha declarado pero nunca se usa
-
-            if(txtUser.Text != null && txtUser.Text != null && cbCredencial.Text != null)
+            string NomUsu = txtUser.Text;
+            AspiranteBL asp = null;
+            if (string.IsNullOrEmpty(txtUser.Text) || string.IsNullOrEmpty(txtUser.Text))
             {
-                
+                FrmError.confirmacionForm("LLENE TODOS LOS CAMPOS");
+            }
+            else
+            {
+                if (cbCredencial.SelectedIndex == 0)
+                {
+                    if (_aspiranteBL.BuscarAspirante(txtUser.Text, txtPass.Text) == 1)
+                    {
+                        _aspiranteBL.Loging(txtUser.Text, txtPass.Text);
+                        FrmPrincipalA frm = new FrmPrincipalA();
+                        this.Hide();
+                        frm.ShowDialog();
+                    }
+                    else
+                    {
+                        FrmError.confirmacionForm("EL USUARIO NO ESTA REGISTRADO");
+                    }
+
+                }
+
             }
 
         }

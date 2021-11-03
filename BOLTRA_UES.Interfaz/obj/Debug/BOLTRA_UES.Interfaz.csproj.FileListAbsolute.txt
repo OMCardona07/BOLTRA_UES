@@ -96,3 +96,4 @@ C:\Users\SophieMH\Source\Repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_U
 C:\Users\SophieMH\Source\Repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_UES.Interfaz.csproj.CopyComplete
 C:\Users\SophieMH\Source\Repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_UES.Interfaz.exe
 C:\Users\SophieMH\Source\Repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_UES.Interfaz.pdb
+C:\Users\user\Source\Repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_UES.Interfaz.FrmEmpresa.resources

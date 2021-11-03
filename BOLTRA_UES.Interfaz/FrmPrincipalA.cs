@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BOLTRA_UES.EN;
 
 namespace BOLTRA_UES.Interfaz
 {
@@ -16,6 +17,8 @@ namespace BOLTRA_UES.Interfaz
         {
             InitializeComponent();
         }
+
+        AspiranteEN _aspirante = new AspiranteEN();
 
         //Metodo para colocar el formulario en pantalla completa y sin utilizar la zona de barra de tareas
         public void PantallaOK()
@@ -28,6 +31,7 @@ namespace BOLTRA_UES.Interfaz
         {
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            lblUserName.Text = Session.userN;
         }
 
         //Metodo para que el boton se mantenga en un color mientras este seleccionado
@@ -75,11 +79,11 @@ namespace BOLTRA_UES.Interfaz
 
         private void AbrirFormularioEnWrapper(Form FormHijo)
         {
-            if(formActivado != null)
+            if (formActivado != null)
             {
                 formActivado.Close();
             }
-              
+
             formActivado = FormHijo;
             FormHijo.TopLevel = false;
             FormHijo.Dock = DockStyle.Fill;

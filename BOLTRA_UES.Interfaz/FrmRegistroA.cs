@@ -119,7 +119,10 @@ namespace BOLTRA_UES.Interfaz
                 _aspirante.direccion = txtDireccion.Text;
 
                 _aspiranteBL.AgregarAspirante(_aspirante);
-                MessageBox.Show("El usuario fue registrado con exito");
+            }
+            else
+            {
+                FrmError.confirmacionForm("LLENE TODOS LOS CAMPOS");
             }
         }
     }

@@ -29,11 +29,14 @@ namespace BOLTRA_UES.Interfaz
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSuccess));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblMensaje = new System.Windows.Forms.Label();
             this.btnOK = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.lblMensaje = new System.Windows.Forms.Label();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.esclarecerForm = new Bunifu.Framework.UI.BunifuFormFadeTransition(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -57,16 +60,6 @@ namespace BOLTRA_UES.Interfaz
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // lblMensaje
-            // 
-            this.lblMensaje.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensaje.Location = new System.Drawing.Point(12, 280);
-            this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(346, 23);
-            this.lblMensaje.TabIndex = 2;
-            this.lblMensaje.Text = "MENSAJE";
-            this.lblMensaje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnOK
             // 
@@ -101,19 +94,43 @@ namespace BOLTRA_UES.Interfaz
             this.btnOK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnOK.Textcolor = System.Drawing.Color.Black;
             this.btnOK.TextFont = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
+            // lblMensaje
+            // 
+            this.lblMensaje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(32)))));
+            this.lblMensaje.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensaje.ForeColor = System.Drawing.Color.White;
+            this.lblMensaje.Location = new System.Drawing.Point(12, 276);
+            this.lblMensaje.Name = "lblMensaje";
+            this.lblMensaje.Size = new System.Drawing.Size(346, 67);
+            this.lblMensaje.TabIndex = 6;
+            this.lblMensaje.Text = "MENSAJE";
+            this.lblMensaje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 20;
+            this.bunifuElipse1.TargetControl = this;
+            // 
+            // esclarecerForm
+            // 
+            this.esclarecerForm.Delay = 1;
             // 
             // FrmSuccess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(370, 500);
-            this.Controls.Add(this.btnOK);
             this.Controls.Add(this.lblMensaje);
+            this.Controls.Add(this.btnOK);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmSuccess";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmSuccess";
+            this.Load += new System.EventHandler(this.FrmSuccess_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -124,7 +141,9 @@ namespace BOLTRA_UES.Interfaz
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblMensaje;
         private Bunifu.Framework.UI.BunifuFlatButton btnOK;
+        private System.Windows.Forms.Label lblMensaje;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.Framework.UI.BunifuFormFadeTransition esclarecerForm;
     }
 }

@@ -35,7 +35,7 @@ namespace BOLTRA_UES.Interfaz
             this.btnPerfil = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnBuscarOfer = new Bunifu.Framework.UI.BunifuFlatButton();
             this.flecha = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblUserName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
@@ -56,7 +56,7 @@ namespace BOLTRA_UES.Interfaz
             this.sidebar.Controls.Add(this.btnPerfil);
             this.sidebar.Controls.Add(this.btnBuscarOfer);
             this.sidebar.Controls.Add(this.flecha);
-            this.sidebar.Controls.Add(this.label3);
+            this.sidebar.Controls.Add(this.lblUserName);
             this.sidebar.Controls.Add(this.pictureBox1);
             this.sidebar.Controls.Add(this.shapeContainer2);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
@@ -180,17 +180,17 @@ namespace BOLTRA_UES.Interfaz
             this.flecha.TabIndex = 7;
             this.flecha.TabStop = false;
             // 
-            // label3
+            // lblUserName
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(71, 174);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 31);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "USERNAME";
+            this.lblUserName.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.ForeColor = System.Drawing.Color.White;
+            this.lblUserName.Location = new System.Drawing.Point(71, 174);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(122, 31);
+            this.lblUserName.TabIndex = 5;
+            this.lblUserName.Text = "USERNAME";
             // 
             // pictureBox1
             // 
@@ -284,7 +284,7 @@ namespace BOLTRA_UES.Interfaz
         private Bunifu.Framework.UI.BunifuFlatButton btnPerfil;
         private Bunifu.Framework.UI.BunifuFlatButton btnBuscarOfer;
         private System.Windows.Forms.PictureBox flecha;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
