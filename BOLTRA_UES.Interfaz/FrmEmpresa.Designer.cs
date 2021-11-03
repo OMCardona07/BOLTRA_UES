@@ -459,6 +459,7 @@ namespace BOLTRA_UES.Interfaz
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmEmpresa";
             this.Text = "FrmEmpresa";
+            this.Load += new System.EventHandler(this.FrmEmpresa_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

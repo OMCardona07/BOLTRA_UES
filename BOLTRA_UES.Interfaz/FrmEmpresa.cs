@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BOLTRA_UES.BL;
+using BOLTRA_UES.EN;
+
 
 namespace BOLTRA_UES.Interfaz
 {
@@ -31,9 +34,18 @@ namespace BOLTRA_UES.Interfaz
         {
 
         }
-
+        EmpresasEN _empresa = new EmpresasEN();
+        EmpresasBL _empresasBL = new EmpresasBL();
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            if (txtNombre.Text != "" && txtRubro.Text != "" && txtDescripcion.Text != "")
+            {
+                _empresa.nombre = txtNombre.Text;
+                _empresa.rubro = txtRubro.Text;
+                _empresa.descripcion = txtDescripcion.Text;
+                _empresasBL.AgregarEmpresa(_empresa);
+                MessageBox.Show("La empresa fue registrada con exito");
+            }
 
         }
 
@@ -48,6 +60,11 @@ namespace BOLTRA_UES.Interfaz
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmEmpresa_Load(object sender, EventArgs e)
         {
 
         }

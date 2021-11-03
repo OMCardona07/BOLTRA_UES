@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BOLTRA_UES.BL;
+using BOLTRA_UES.EN;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,8 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BOLTRA_UES.BL;
-using BOLTRA_UES.EN;
+
 
 namespace BOLTRA_UES.Interfaz
 {
