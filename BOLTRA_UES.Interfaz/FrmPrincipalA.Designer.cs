@@ -42,11 +42,13 @@ namespace BOLTRA_UES.Interfaz
             this.header = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.PictureBox();
             this.wrapper = new System.Windows.Forms.Panel();
+            this.lblBienvenida = new System.Windows.Forms.Label();
             this.sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flecha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
+            this.wrapper.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidebar
@@ -62,7 +64,7 @@ namespace BOLTRA_UES.Interfaz
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(270, 940);
+            this.sidebar.Size = new System.Drawing.Size(270, 615);
             this.sidebar.TabIndex = 1;
             // 
             // btnPostulacion
@@ -210,7 +212,7 @@ namespace BOLTRA_UES.Interfaz
             this.shapeContainer2.Name = "shapeContainer2";
             this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.lineShape1});
-            this.shapeContainer2.Size = new System.Drawing.Size(270, 940);
+            this.shapeContainer2.Size = new System.Drawing.Size(270, 615);
             this.shapeContainer2.TabIndex = 10;
             this.shapeContainer2.TabStop = false;
             // 
@@ -248,17 +250,31 @@ namespace BOLTRA_UES.Interfaz
             // wrapper
             // 
             this.wrapper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(243)))), ((int)(((byte)(239)))));
+            this.wrapper.Controls.Add(this.lblBienvenida);
             this.wrapper.Dock = System.Windows.Forms.DockStyle.Fill;
             this.wrapper.Location = new System.Drawing.Point(270, 60);
             this.wrapper.Name = "wrapper";
-            this.wrapper.Size = new System.Drawing.Size(1170, 880);
+            this.wrapper.Size = new System.Drawing.Size(1170, 555);
             this.wrapper.TabIndex = 3;
+            // 
+            // lblBienvenida
+            // 
+            this.lblBienvenida.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblBienvenida.AutoSize = true;
+            this.lblBienvenida.Font = new System.Drawing.Font("Poppins", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBienvenida.ForeColor = System.Drawing.Color.Black;
+            this.lblBienvenida.Location = new System.Drawing.Point(171, 191);
+            this.lblBienvenida.Name = "lblBienvenida";
+            this.lblBienvenida.Size = new System.Drawing.Size(302, 79);
+            this.lblBienvenida.TabIndex = 8;
+            this.lblBienvenida.Text = "USERNAME";
+            this.lblBienvenida.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FrmPrincipalA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1440, 940);
+            this.ClientSize = new System.Drawing.Size(1440, 615);
             this.Controls.Add(this.wrapper);
             this.Controls.Add(this.header);
             this.Controls.Add(this.sidebar);
@@ -273,6 +289,8 @@ namespace BOLTRA_UES.Interfaz
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.header.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
+            this.wrapper.ResumeLayout(false);
+            this.wrapper.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -291,5 +309,6 @@ namespace BOLTRA_UES.Interfaz
         private System.Windows.Forms.Panel header;
         private System.Windows.Forms.PictureBox btnSalir;
         private System.Windows.Forms.Panel wrapper;
+        private System.Windows.Forms.Label lblBienvenida;
     }
 }

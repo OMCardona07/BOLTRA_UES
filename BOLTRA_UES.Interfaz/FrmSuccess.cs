@@ -12,9 +12,10 @@ namespace BOLTRA_UES.Interfaz
 {
     public partial class FrmSuccess : Form
     {
-        public FrmSuccess()
+        public FrmSuccess(string mensaje)
         {
             InitializeComponent();
+            lblMensaje.Text = mensaje;
         }
 
         private void FrmSuccess_Load(object sender, EventArgs e)
@@ -23,9 +24,15 @@ namespace BOLTRA_UES.Interfaz
             esclarecerForm.Delay = Convert.ToInt32(0.5);
         }
 
+        public static void confirmacionForm(string mensaje)
+        {
+            FrmSuccess frm = new FrmSuccess(mensaje);
+            frm.ShowDialog();
+        }
+
         private void btnOK_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

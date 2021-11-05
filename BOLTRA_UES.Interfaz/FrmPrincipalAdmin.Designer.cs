@@ -35,19 +35,21 @@ namespace BOLTRA_UES.Interfaz
             this.btnSeguimiento = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnEmpresas = new Bunifu.Framework.UI.BunifuFlatButton();
             this.flecha = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblUserName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.header = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.PictureBox();
             this.wrapper = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblBienvenida = new System.Windows.Forms.Label();
             this.sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flecha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
+            this.wrapper.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidebar
@@ -57,13 +59,13 @@ namespace BOLTRA_UES.Interfaz
             this.sidebar.Controls.Add(this.btnSeguimiento);
             this.sidebar.Controls.Add(this.btnEmpresas);
             this.sidebar.Controls.Add(this.flecha);
-            this.sidebar.Controls.Add(this.label3);
+            this.sidebar.Controls.Add(this.lblUserName);
             this.sidebar.Controls.Add(this.pictureBox1);
             this.sidebar.Controls.Add(this.shapeContainer2);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(270, 940);
+            this.sidebar.Size = new System.Drawing.Size(270, 700);
             this.sidebar.TabIndex = 2;
             // 
             // btnEmpleos
@@ -178,17 +180,17 @@ namespace BOLTRA_UES.Interfaz
             this.flecha.TabIndex = 7;
             this.flecha.TabStop = false;
             // 
-            // label3
+            // lblUserName
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(71, 174);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 31);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "USERNAME";
+            this.lblUserName.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.ForeColor = System.Drawing.Color.White;
+            this.lblUserName.Location = new System.Drawing.Point(71, 174);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(122, 31);
+            this.lblUserName.TabIndex = 5;
+            this.lblUserName.Text = "USERNAME";
             // 
             // pictureBox1
             // 
@@ -208,7 +210,7 @@ namespace BOLTRA_UES.Interfaz
             this.shapeContainer2.Name = "shapeContainer2";
             this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.lineShape1});
-            this.shapeContainer2.Size = new System.Drawing.Size(270, 940);
+            this.shapeContainer2.Size = new System.Drawing.Size(270, 700);
             this.shapeContainer2.TabIndex = 10;
             this.shapeContainer2.TabStop = false;
             // 
@@ -232,6 +234,17 @@ namespace BOLTRA_UES.Interfaz
             this.header.Size = new System.Drawing.Size(1170, 60);
             this.header.TabIndex = 3;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(168)))), ((int)(((byte)(168)))));
+            this.label1.Location = new System.Drawing.Point(6, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(315, 31);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "DASHBOARD DE ADMINISTRADOR";
+            // 
             // btnSalir
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -246,28 +259,31 @@ namespace BOLTRA_UES.Interfaz
             // wrapper
             // 
             this.wrapper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(243)))), ((int)(((byte)(239)))));
+            this.wrapper.Controls.Add(this.lblBienvenida);
             this.wrapper.Dock = System.Windows.Forms.DockStyle.Fill;
             this.wrapper.Location = new System.Drawing.Point(270, 60);
             this.wrapper.Name = "wrapper";
-            this.wrapper.Size = new System.Drawing.Size(1170, 880);
+            this.wrapper.Size = new System.Drawing.Size(1170, 640);
             this.wrapper.TabIndex = 4;
             // 
-            // label1
+            // lblBienvenida
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(168)))), ((int)(((byte)(168)))));
-            this.label1.Location = new System.Drawing.Point(6, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(315, 31);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "DASHBOARD DE ADMINISTRADOR";
+            this.lblBienvenida.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblBienvenida.AutoSize = true;
+            this.lblBienvenida.Font = new System.Drawing.Font("Poppins", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBienvenida.ForeColor = System.Drawing.Color.Black;
+            this.lblBienvenida.Location = new System.Drawing.Point(171, 191);
+            this.lblBienvenida.Name = "lblBienvenida";
+            this.lblBienvenida.Size = new System.Drawing.Size(302, 79);
+            this.lblBienvenida.TabIndex = 7;
+            this.lblBienvenida.Text = "USERNAME";
+            this.lblBienvenida.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FrmPrincipalAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1440, 940);
+            this.ClientSize = new System.Drawing.Size(1440, 700);
             this.Controls.Add(this.wrapper);
             this.Controls.Add(this.header);
             this.Controls.Add(this.sidebar);
@@ -283,6 +299,8 @@ namespace BOLTRA_UES.Interfaz
             this.header.ResumeLayout(false);
             this.header.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
+            this.wrapper.ResumeLayout(false);
+            this.wrapper.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -294,7 +312,7 @@ namespace BOLTRA_UES.Interfaz
         private Bunifu.Framework.UI.BunifuFlatButton btnSeguimiento;
         private Bunifu.Framework.UI.BunifuFlatButton btnEmpresas;
         private System.Windows.Forms.PictureBox flecha;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
@@ -302,5 +320,6 @@ namespace BOLTRA_UES.Interfaz
         private System.Windows.Forms.PictureBox btnSalir;
         private System.Windows.Forms.Panel wrapper;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblBienvenida;
     }
 }

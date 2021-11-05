@@ -22,6 +22,8 @@ namespace BOLTRA_UES.Interfaz
 
         AspiranteEN _aspirante = new AspiranteEN();
         AspiranteBL _aspiranteBL = new AspiranteBL();
+        AdministradorEN _admin = new AdministradorEN();
+        AdministradorBL _adminBL = new AdministradorBL();
 
 
         private void btnRegistroA_Click(object sender, EventArgs e)
@@ -57,9 +59,36 @@ namespace BOLTRA_UES.Interfaz
                     }
 
                 }
+                if (cbCredencial.SelectedIndex == 1)
+                {
+                    if (_adminBL.BuscarAdmin(txtUser.Text, txtPass.Text) == 1)
+                    {
+                        _adminBL.Loging(txtUser.Text, txtPass.Text);
+                        FrmPrincipalAdmin frm = new FrmPrincipalAdmin();
+                        this.Hide();
+                        frm.ShowDialog();
+                    }
+                    else
+                    {
+                        FrmError.confirmacionForm("EL USUARIO NO ESTA REGISTRADO");
+                    }
+                }
 
             }
 
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = new DialogResult();
+            Form mensaje = new FrmWarning("¿ESTA SEGURO QUE QUIERE\n" + "SALIR DE LA APLICACION?");
+            resultado = mensaje.ShowDialog();
+
+            if (resultado == DialogResult.OK)
+            {
+                Application.Exit();
+                this.Hide();
+            }
         }
     }
 }

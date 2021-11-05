@@ -44,7 +44,7 @@ namespace BOLTRA_UES.Interfaz
                 _empresa.rubro = txtRubro.Text;
                 _empresa.descripcion = txtDescripcion.Text;
                 _empresasBL.AgregarEmpresa(_empresa);
-                MessageBox.Show("La empresa fue registrada con exito");
+                FrmSuccess.confirmacionForm("LA EMPRESA FUE \n" + "REGISTRADA CON EXITO");
             }
 
         }
@@ -66,7 +66,6 @@ namespace BOLTRA_UES.Interfaz
 
         private void FrmEmpresa_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

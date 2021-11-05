@@ -119,11 +119,19 @@ namespace BOLTRA_UES.Interfaz
                 _aspirante.direccion = txtDireccion.Text;
 
                 _aspiranteBL.AgregarAspirante(_aspirante);
+                FrmSuccess.confirmacionForm("EL ASPIRANTE FUE \n" + "REGISTRADO CON EXITO");
             }
             else
             {
                 FrmError.confirmacionForm("LLENE TODOS LOS CAMPOS");
             }
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            FrmLogin login = new FrmLogin();
+            this.Hide();
+            login.ShowDialog();
         }
     }
 }

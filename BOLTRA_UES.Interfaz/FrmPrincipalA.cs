@@ -29,9 +29,8 @@ namespace BOLTRA_UES.Interfaz
 
         private void FrmPrincipalA_Load(object sender, EventArgs e)
         {
-            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
             lblUserName.Text = Session.userN;
+            lblBienvenida.Text = Session.userN + " " + "\nBIENVENIDO AL SISTEMA BOLTRA";
         }
 
         //Metodo para que el boton se mantenga en un color mientras este seleccionado
@@ -72,10 +71,11 @@ namespace BOLTRA_UES.Interfaz
         {
             BotonSelect((Bunifu.Framework.UI.BunifuFlatButton)sender);
             SeguirBoton((Bunifu.Framework.UI.BunifuFlatButton)sender);
+            AbrirFormularioEnWrapper(new FrmPerfil());
         }
         //-----------------------------------------------------------------//
 
-        private Form formActivado = new FrmBuscarOfer();
+        private Form formActivado = null;
 
         private void AbrirFormularioEnWrapper(Form FormHijo)
         {
@@ -96,13 +96,14 @@ namespace BOLTRA_UES.Interfaz
         private void btnSalir_Click(object sender, EventArgs e)
         {
             DialogResult resultado = new DialogResult();
-            Form mensaje = new FrmWarning("¿ESTA SEGURO QUE QUIERE\n" + "SALIR DE LA APLICACION?");
+            FrmLogin login = new FrmLogin();
+            Form mensaje = new FrmWarning("¿ESTA SEGURO QUE QUIERE\n" + "CERRAR SESION");
             resultado = mensaje.ShowDialog();
 
             if (resultado == DialogResult.OK)
             {
-                Application.Exit();
                 this.Hide();
+                login.ShowDialog();
             }
         }
     }
