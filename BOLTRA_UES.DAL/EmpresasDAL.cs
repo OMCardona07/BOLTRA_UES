@@ -15,7 +15,7 @@ namespace BOLTRA_UES.DAL
         {
             BDComun conexion = new BDComun();
             int retorno;
-            MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO Empresa (nombre, rubro, descripcion) VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}')",
+            MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO empresas (Nombre, Rubro, Descripcion) VALUES('{0}','{1}','{2}')",
             pEmpresa.nombre, pEmpresa.rubro, pEmpresa.descripcion), conexion.establecerConxion());
             retorno = comando.ExecuteNonQuery();
             try

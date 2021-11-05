@@ -63,41 +63,6 @@ namespace BOLTRA_UES.DAL
             return resultado;
         }
 
-        public AspiranteEN ObtenerAspiranteNombreUsu(string pUsuario, string pPass)
-        {
-            AspiranteEN obj = new AspiranteEN();
-            BDComun Conexion = new BDComun();
-
-            MySqlDataReader reader;
-            MySqlConnection conexion = Conexion.establecerConxion();
-            //conexion.Open();
-
-            string sql = "SELECT nombres, apellidos, dui, fechaN, userN, pass," +
-                "tipoUser, genero, estadoC, telefono, direccion FROM Aspirante WHERE userN= @usuario and pass=  @pass";
-
-            MySqlCommand comando = new MySqlCommand(sql, conexion);
-            comando.Parameters.AddWithValue("@usuario", pUsuario);
-            comando.Parameters.AddWithValue("@pass", pPass);
-            reader = comando.ExecuteReader();
-
-
-            while (reader.Read())
-            {
-                obj.nombres = reader.GetString(0);
-                obj.apellidos = reader.GetString(1);
-                obj.dui = reader.GetString(2);
-                obj.fechaN = reader.GetString(3);
-                obj.userN = reader.GetString(4);
-                obj.pass = reader.GetString(5);
-                obj.tipoUser = reader.GetString(6);
-                obj.genero = reader.GetString(7);
-                obj.estadoC = reader.GetString(8);
-                obj.telefono = reader.GetString(9);
-                obj.direccion = reader.GetString(10);
-            }
-            return obj;
-        }
-
         public bool Loging(string pUsuario, string pPass)
         {
             BDComun Conexion = new BDComun();
@@ -134,6 +99,37 @@ namespace BOLTRA_UES.DAL
             }
             else
                 return false;
+        }
+
+
+
+        public int ModificarAspirante(AspiranteEN pAspirante)
+        {
+            BDComun Conexion = new BDComun();
+
+            MySqlDataReader reader;
+            MySqlConnection conexion = Conexion.establecerConxion();
+            //conexion.Open();
+
+            string sql = "UPDATE Aspirante SET nombres=@nombres, apellidos=@apellidos, dui=@dui," +
+                "fechaN=@fechaN, userN=@userN, pass=@pass, tipoUser=@tipoUser, genero=@genero," +
+                "estadoC=@estadoC, telefono=@telefono, direccion=@direccion";
+
+            MySqlCommand comando = new MySqlCommand(sql, conexion);
+            comando.Parameters.AddWithValue("@nombres", pAspirante.nombres);
+            comando.Parameters.AddWithValue("@apellidos", pAspirante.apellidos);
+            comando.Parameters.AddWithValue("@dui", pAspirante.dui);
+            comando.Parameters.AddWithValue("@fechaN", pAspirante.fechaN);
+            comando.Parameters.AddWithValue("@userN", pAspirante.userN);
+            comando.Parameters.AddWithValue("@pass", pAspirante.pass);
+            comando.Parameters.AddWithValue("@tipoUser", pAspirante.tipoUser);
+            comando.Parameters.AddWithValue("@genero", pAspirante.genero);
+            comando.Parameters.AddWithValue("@estadoC", pAspirante.estadoC);
+            comando.Parameters.AddWithValue("@telefono", pAspirante.telefono);
+            comando.Parameters.AddWithValue("@direccion", pAspirante.direccion);
+            int resultado = comando.ExecuteNonQuery();
+            conexion.Close();
+            return resultado;
         }
     }
 }
