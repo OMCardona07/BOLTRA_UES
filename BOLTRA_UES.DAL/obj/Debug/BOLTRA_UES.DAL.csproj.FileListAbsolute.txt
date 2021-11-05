@@ -27,7 +27,6 @@ C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.DAL\bin\Debug\System.Numerics.V
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.DAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.DAL\obj\Debug\BOLTRA_UES.DAL.csproj.AssemblyReference.cache
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.DAL\obj\Debug\BOLTRA_UES.DAL.csproj.CoreCompileInputs.cache
-C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.DAL\obj\Debug\BOLTRA_UES.DAL.csproj.CopyComplete
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.DAL\obj\Debug\BOLTRA_UES.DAL.dll
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.DAL\obj\Debug\BOLTRA_UES.DAL.pdb
 C:\Users\SophieMH\Source\Repos\BOLTRA_UES\BOLTRA_UES.DAL\bin\Debug\BOLTRA_UES.DAL.dll.config

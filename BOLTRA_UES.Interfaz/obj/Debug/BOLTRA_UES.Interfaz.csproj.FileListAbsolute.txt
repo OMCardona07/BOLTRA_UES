@@ -37,7 +37,6 @@ C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\bin\Debug\System.Buffe
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\bin\Debug\K4os.Compression.LZ4.xml
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\bin\Debug\K4os.Hash.xxHash.xml
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\bin\Debug\System.Numerics.Vectors.xml
-C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_UES.Interfaz.exe.config
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_UES.Interfaz.FrmPrincipalA.resources
@@ -97,3 +96,6 @@ C:\Users\SophieMH\Source\Repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_U
 C:\Users\SophieMH\Source\Repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_UES.Interfaz.exe
 C:\Users\SophieMH\Source\Repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_UES.Interfaz.pdb
 C:\Users\user\Source\Repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_UES.Interfaz.FrmEmpresa.resources
+C:\Users\user\Source\Repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_UES.Interfaz.FrmPerfil.resources
+C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml

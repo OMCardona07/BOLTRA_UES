@@ -31,6 +31,7 @@ namespace BOLTRA_UES.Interfaz
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.header = new System.Windows.Forms.Panel();
+            this.btnSalir = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,6 +46,7 @@ namespace BOLTRA_UES.Interfaz
             this.label4 = new System.Windows.Forms.Label();
             this.cbCredencial = new System.Windows.Forms.ComboBox();
             this.header.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -54,6 +56,7 @@ namespace BOLTRA_UES.Interfaz
             // header
             // 
             this.header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(32)))));
+            this.header.Controls.Add(this.btnSalir);
             this.header.Controls.Add(this.pictureBox1);
             this.header.Controls.Add(this.label1);
             this.header.Dock = System.Windows.Forms.DockStyle.Top;
@@ -61,6 +64,17 @@ namespace BOLTRA_UES.Interfaz
             this.header.Name = "header";
             this.header.Size = new System.Drawing.Size(370, 136);
             this.header.TabIndex = 0;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.Location = new System.Drawing.Point(327, 3);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(40, 40);
+            this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnSalir.TabIndex = 8;
+            this.btnSalir.TabStop = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // pictureBox1
             // 
@@ -128,6 +142,7 @@ namespace BOLTRA_UES.Interfaz
             this.txtPass.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.Location = new System.Drawing.Point(34, 299);
             this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(298, 25);
             this.txtPass.TabIndex = 13;
             // 
@@ -273,6 +288,7 @@ namespace BOLTRA_UES.Interfaz
             this.Text = "FrmLogin";
             this.header.ResumeLayout(false);
             this.header.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -298,5 +314,6 @@ namespace BOLTRA_UES.Interfaz
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.ComboBox cbCredencial;
+        private System.Windows.Forms.PictureBox btnSalir;
     }
 }

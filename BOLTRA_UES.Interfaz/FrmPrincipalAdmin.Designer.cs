@@ -101,6 +101,7 @@ namespace BOLTRA_UES.Interfaz
             this.btnEmpleos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEmpleos.Textcolor = System.Drawing.Color.White;
             this.btnEmpleos.TextFont = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpleos.Click += new System.EventHandler(this.btnEmpleos_Click);
             // 
             // btnSeguimiento
             // 
@@ -135,6 +136,7 @@ namespace BOLTRA_UES.Interfaz
             this.btnSeguimiento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSeguimiento.Textcolor = System.Drawing.Color.White;
             this.btnSeguimiento.TextFont = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeguimiento.Click += new System.EventHandler(this.btnSeguimiento_Click);
             // 
             // btnEmpresas
             // 
@@ -169,6 +171,7 @@ namespace BOLTRA_UES.Interfaz
             this.btnEmpresas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEmpresas.Textcolor = System.Drawing.Color.White;
             this.btnEmpresas.TextFont = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpresas.Click += new System.EventHandler(this.btnEmpresas_Click);
             // 
             // flecha
             // 
@@ -255,6 +258,7 @@ namespace BOLTRA_UES.Interfaz
             this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnSalir.TabIndex = 0;
             this.btnSalir.TabStop = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // wrapper
             // 

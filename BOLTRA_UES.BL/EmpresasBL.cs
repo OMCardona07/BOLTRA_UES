@@ -15,5 +15,10 @@ namespace BOLTRA_UES.BL
         {
             return DAL.AgregarEmpresa(pEmpresa);
         }
+
+        public List<EmpresasEN> ObtenerEmpresas()
+        {
+            return DAL.ObtenerEmpresas();
+        }
     }
 }

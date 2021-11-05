@@ -92,18 +92,19 @@ namespace BOLTRA_UES.Interfaz
             //AbrirFormularioEnWrapper(new FrmBuscarOfer());
         }
 
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
             DialogResult resultado = new DialogResult();
             FrmLogin login = new FrmLogin();
             Form mensaje = new FrmWarning("¿ESTA SEGURO QUE QUIERE\n" + "CERRAR SESION");
             resultado = mensaje.ShowDialog();
-
+            
             if (resultado == DialogResult.OK)
             {
                 this.Hide();
                 login.ShowDialog();
             }
-        }
+        } 
     }
 }
