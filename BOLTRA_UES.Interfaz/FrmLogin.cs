@@ -44,7 +44,7 @@ namespace BOLTRA_UES.Interfaz
             }
             else
             {
-                if (cbCredencial.SelectedIndex == 0)
+                if (cbCredencial.SelectedIndex == 1)
                 {
                     if (_aspiranteBL.BuscarAspirante(txtUser.Text, txtPass.Text) == 1)
                     {
@@ -59,7 +59,7 @@ namespace BOLTRA_UES.Interfaz
                     }
 
                 }
-                if (cbCredencial.SelectedIndex == 1)
+                if (cbCredencial.SelectedIndex == 2)
                 {
                     if (_adminBL.BuscarAdmin(txtUser.Text, txtPass.Text) == 1)
                     {
@@ -89,6 +89,11 @@ namespace BOLTRA_UES.Interfaz
                 Application.Exit();
                 this.Hide();
             }
+        }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+            cbCredencial.SelectedIndex = 0;
         }
     }
 }

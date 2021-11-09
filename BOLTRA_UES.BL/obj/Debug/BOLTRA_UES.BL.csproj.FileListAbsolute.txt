@@ -27,10 +27,10 @@ C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.BL\bin\Debug\K4os.Hash.xxHash.x
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.BL\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.BL\obj\Debug\BOLTRA_UES.BL.csproj.AssemblyReference.cache
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.BL\obj\Debug\BOLTRA_UES.BL.csproj.CoreCompileInputs.cache
-C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.BL\obj\Debug\BOLTRA_UES.BL.csproj.CopyComplete
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.BL\obj\Debug\BOLTRA_UES.BL.dll
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.BL\obj\Debug\BOLTRA_UES.BL.pdb
 C:\Users\SophieMH\Source\Repos\BOLTRA_UES\BOLTRA_UES.BL\obj\Debug\BOLTRA_UES.BL.csproj.AssemblyReference.cache
 C:\Users\SophieMH\Source\Repos\BOLTRA_UES\BOLTRA_UES.BL\obj\Debug\BOLTRA_UES.BL.csproj.CoreCompileInputs.cache
 C:\Users\SophieMH\Source\Repos\BOLTRA_UES\BOLTRA_UES.BL\obj\Debug\BOLTRA_UES.BL.dll
 C:\Users\SophieMH\Source\Repos\BOLTRA_UES\BOLTRA_UES.BL\obj\Debug\BOLTRA_UES.BL.pdb
+C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.BL\obj\Debug\BOLTRA_UES.BL.csproj.CopyComplete

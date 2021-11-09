@@ -30,17 +30,13 @@ namespace BOLTRA_UES.Interfaz
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEmpresa));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.radioElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAgregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnEditar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -62,12 +58,8 @@ namespace BOLTRA_UES.Interfaz
             this.empresasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.empresasTableAdapter = new BOLTRA_UES.Interfaz.boltra_uesDataSetTableAdapters.empresasTableAdapter();
             this.tablaEmpresas = new System.Windows.Forms.DataGridView();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreEmpresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RubroEmpresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DescripcionE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -76,6 +68,7 @@ namespace BOLTRA_UES.Interfaz
             ((System.ComponentModel.ISupportInitialize)(this.boltra_uesDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empresasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaEmpresas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -114,27 +107,18 @@ namespace BOLTRA_UES.Interfaz
             this.txtBuscar.BackColor = System.Drawing.Color.White;
             this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBuscar.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(66, 105);
+            this.txtBuscar.Location = new System.Drawing.Point(67, 104);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(476, 22);
+            this.txtBuscar.Size = new System.Drawing.Size(543, 22);
             this.txtBuscar.TabIndex = 25;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(30, 101);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 24;
-            this.pictureBox3.TabStop = false;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(27, 98);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(526, 35);
+            this.pictureBox2.Size = new System.Drawing.Size(588, 35);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 23;
             this.pictureBox2.TabStop = false;
@@ -145,7 +129,7 @@ namespace BOLTRA_UES.Interfaz
             this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
             this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAgregar.BorderRadius = 7;
-            this.btnAgregar.ButtonText = "AGREGAR";
+            this.btnAgregar.ButtonText = "NUEVO";
             this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregar.DisabledColor = System.Drawing.Color.Gray;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -162,7 +146,7 @@ namespace BOLTRA_UES.Interfaz
             this.btnAgregar.IconVisible = true;
             this.btnAgregar.IconZoom = 70D;
             this.btnAgregar.IsTab = false;
-            this.btnAgregar.Location = new System.Drawing.Point(25, 539);
+            this.btnAgregar.Location = new System.Drawing.Point(25, 556);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
             this.btnAgregar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
@@ -170,10 +154,11 @@ namespace BOLTRA_UES.Interfaz
             this.btnAgregar.selected = false;
             this.btnAgregar.Size = new System.Drawing.Size(148, 39);
             this.btnAgregar.TabIndex = 26;
-            this.btnAgregar.Text = "AGREGAR";
+            this.btnAgregar.Text = "NUEVO";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAgregar.Textcolor = System.Drawing.Color.Black;
             this.btnAgregar.TextFont = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnEditar
             // 
@@ -198,7 +183,7 @@ namespace BOLTRA_UES.Interfaz
             this.btnEditar.IconVisible = true;
             this.btnEditar.IconZoom = 70D;
             this.btnEditar.IsTab = false;
-            this.btnEditar.Location = new System.Drawing.Point(186, 539);
+            this.btnEditar.Location = new System.Drawing.Point(237, 556);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
             this.btnEditar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
@@ -235,7 +220,7 @@ namespace BOLTRA_UES.Interfaz
             this.btnEliminar.IconVisible = true;
             this.btnEliminar.IconZoom = 70D;
             this.btnEliminar.IsTab = false;
-            this.btnEliminar.Location = new System.Drawing.Point(347, 539);
+            this.btnEliminar.Location = new System.Drawing.Point(467, 556);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
             this.btnEliminar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
@@ -247,6 +232,7 @@ namespace BOLTRA_UES.Interfaz
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEliminar.Textcolor = System.Drawing.Color.Black;
             this.btnEliminar.TextFont = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // txtCodigo
             // 
@@ -346,7 +332,7 @@ namespace BOLTRA_UES.Interfaz
             this.txtDescripcion.Location = new System.Drawing.Point(776, 397);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(335, 72);
+            this.txtDescripcion.Size = new System.Drawing.Size(335, 95);
             this.txtDescripcion.TabIndex = 41;
             // 
             // pictureBox7
@@ -354,7 +340,7 @@ namespace BOLTRA_UES.Interfaz
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
             this.pictureBox7.Location = new System.Drawing.Point(768, 387);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(356, 95);
+            this.pictureBox7.Size = new System.Drawing.Size(356, 118);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 40;
             this.pictureBox7.TabStop = false;
@@ -375,7 +361,7 @@ namespace BOLTRA_UES.Interfaz
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
             this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnGuardar.BorderRadius = 7;
-            this.btnGuardar.ButtonText = "GUARDAR";
+            this.btnGuardar.ButtonText = "GUARDAR MODIFICACIONES";
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.DisabledColor = System.Drawing.Color.Gray;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -392,7 +378,7 @@ namespace BOLTRA_UES.Interfaz
             this.btnGuardar.IconVisible = true;
             this.btnGuardar.IconZoom = 70D;
             this.btnGuardar.IsTab = false;
-            this.btnGuardar.Location = new System.Drawing.Point(769, 539);
+            this.btnGuardar.Location = new System.Drawing.Point(769, 556);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
             this.btnGuardar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
@@ -400,10 +386,11 @@ namespace BOLTRA_UES.Interfaz
             this.btnGuardar.selected = false;
             this.btnGuardar.Size = new System.Drawing.Size(355, 39);
             this.btnGuardar.TabIndex = 42;
-            this.btnGuardar.Text = "GUARDAR";
+            this.btnGuardar.Text = "GUARDAR MODIFICACIONES";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnGuardar.Textcolor = System.Drawing.Color.Black;
             this.btnGuardar.TextFont = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // boltra_uesDataSet
             // 
@@ -423,73 +410,34 @@ namespace BOLTRA_UES.Interfaz
             // 
             this.tablaEmpresas.AllowUserToAddRows = false;
             this.tablaEmpresas.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Poppins", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tablaEmpresas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.tablaEmpresas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tablaEmpresas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.tablaEmpresas.BackgroundColor = System.Drawing.Color.White;
             this.tablaEmpresas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Poppins", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tablaEmpresas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.tablaEmpresas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tablaEmpresas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Codigo,
-            this.NombreEmpresa,
-            this.RubroEmpresa,
-            this.DescripcionE});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Poppins", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tablaEmpresas.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tablaEmpresas.DefaultCellStyle = dataGridViewCellStyle1;
             this.tablaEmpresas.Location = new System.Drawing.Point(25, 155);
             this.tablaEmpresas.Name = "tablaEmpresas";
             this.tablaEmpresas.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Poppins", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tablaEmpresas.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.tablaEmpresas.Size = new System.Drawing.Size(528, 350);
-            this.tablaEmpresas.TabIndex = 43;
-            this.tablaEmpresas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaEmpresas_CellClick);
-            this.tablaEmpresas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaEmpresas_CellDoubleClick);
+            this.tablaEmpresas.Size = new System.Drawing.Size(590, 350);
+            this.tablaEmpresas.TabIndex = 45;
             // 
-            // Codigo
+            // pictureBox3
             // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            // 
-            // NombreEmpresa
-            // 
-            this.NombreEmpresa.HeaderText = "Nombre de la empresa";
-            this.NombreEmpresa.Name = "NombreEmpresa";
-            this.NombreEmpresa.ReadOnly = true;
-            // 
-            // RubroEmpresa
-            // 
-            this.RubroEmpresa.HeaderText = "Rubro";
-            this.RubroEmpresa.Name = "RubroEmpresa";
-            this.RubroEmpresa.ReadOnly = true;
-            // 
-            // DescripcionE
-            // 
-            this.DescripcionE.HeaderText = "Descripcion";
-            this.DescripcionE.Name = "DescripcionE";
-            this.DescripcionE.ReadOnly = true;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(31, 100);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 46;
+            this.pictureBox3.TabStop = false;
             // 
             // FrmEmpresa
             // 
@@ -497,6 +445,7 @@ namespace BOLTRA_UES.Interfaz
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1170, 640);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.tablaEmpresas);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtDescripcion);
@@ -515,7 +464,6 @@ namespace BOLTRA_UES.Interfaz
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.txtBuscar);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -525,7 +473,6 @@ namespace BOLTRA_UES.Interfaz
             this.Load += new System.EventHandler(this.FrmEmpresa_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -534,6 +481,7 @@ namespace BOLTRA_UES.Interfaz
             ((System.ComponentModel.ISupportInitialize)(this.boltra_uesDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empresasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaEmpresas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -562,15 +510,11 @@ namespace BOLTRA_UES.Interfaz
         private Bunifu.Framework.UI.BunifuFlatButton btnEditar;
         private Bunifu.Framework.UI.BunifuFlatButton btnAgregar;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private boltra_uesDataSet boltra_uesDataSet;
         private System.Windows.Forms.BindingSource empresasBindingSource;
         private boltra_uesDataSetTableAdapters.empresasTableAdapter empresasTableAdapter;
+        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DataGridView tablaEmpresas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreEmpresa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RubroEmpresa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionE;
     }
 }

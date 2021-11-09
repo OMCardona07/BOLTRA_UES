@@ -96,6 +96,8 @@ namespace BOLTRA_UES.Interfaz
 
                 _aspiranteBL.ModificarAspirante(_aspirante);
                 FrmSuccess.confirmacionForm("EL PERFIL FUE \n" + "MODIFICADO CON EXITO");
+                inhabilitarTxt();
+                llenarTxt();
             }
             else
             {

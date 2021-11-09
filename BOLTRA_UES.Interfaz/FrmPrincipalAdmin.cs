@@ -82,7 +82,7 @@ namespace BOLTRA_UES.Interfaz
         {
             BotonSelect((Bunifu.Framework.UI.BunifuFlatButton)sender);
             SeguirBoton((Bunifu.Framework.UI.BunifuFlatButton)sender);
-            //AbrirFormularioEnWrapper(new FrmBuscarOfer());
+            AbrirFormularioEnWrapper(new FrmEmpleo());
         }
 
         private void btnSeguimiento_Click(object sender, EventArgs e)

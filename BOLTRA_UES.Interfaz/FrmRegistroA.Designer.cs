@@ -105,6 +105,7 @@ namespace BOLTRA_UES.Interfaz
             this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnSalir.TabIndex = 6;
             this.btnSalir.TabStop = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // label1
             // 
@@ -345,6 +346,7 @@ namespace BOLTRA_UES.Interfaz
             this.cbGenero.FormattingEnabled = true;
             this.cbGenero.ItemHeight = 25;
             this.cbGenero.Items.AddRange(new object[] {
+            "---SELECCIONE UN OPCION---",
             "MASCULINO",
             "FEMENINO"});
             this.cbGenero.Location = new System.Drawing.Point(492, 291);
@@ -373,6 +375,7 @@ namespace BOLTRA_UES.Interfaz
             this.cbEstadoC.FormattingEnabled = true;
             this.cbEstadoC.ItemHeight = 25;
             this.cbEstadoC.Items.AddRange(new object[] {
+            "---SELECCIONE UNA OPCION---",
             "SOLTERO/A",
             "CASADO/A",
             "DIVORCIADO/A",

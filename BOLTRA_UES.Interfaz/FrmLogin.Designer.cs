@@ -257,8 +257,9 @@ namespace BOLTRA_UES.Interfaz
             this.cbCredencial.FormattingEnabled = true;
             this.cbCredencial.ItemHeight = 25;
             this.cbCredencial.Items.AddRange(new object[] {
-            "Aspirante",
-            "Administrador"});
+            "--SELECCIONE UNA OPCION--",
+            "ASPIRANTE",
+            "ADMINISTRADOR"});
             this.cbCredencial.Location = new System.Drawing.Point(35, 383);
             this.cbCredencial.Name = "cbCredencial";
             this.cbCredencial.Size = new System.Drawing.Size(297, 33);
@@ -286,6 +287,7 @@ namespace BOLTRA_UES.Interfaz
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLogin";
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.header.ResumeLayout(false);
             this.header.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();

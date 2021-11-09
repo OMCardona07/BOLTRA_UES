@@ -33,6 +33,8 @@ namespace BOLTRA_UES.Interfaz
             txtNombres.ForeColor = Color.Gray;
             txtTelefono.Text = "0000-0000";
             txtPass.ForeColor = Color.Gray;*/
+            cbGenero.SelectedIndex = 0;
+            cbEstadoC.SelectedIndex = 0;
         }
 
         private void txtDui_Enter(object sender, EventArgs e)
@@ -104,7 +106,7 @@ namespace BOLTRA_UES.Interfaz
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (txtNombres.Text != "" && txtApellidos.Text != "" && txtDui.Text != "" && txtUserN.Text != ""
-                && txtPass.Text != "" && cbGenero.Text != "" && cbEstadoC.Text != "" && txtTelefono.Text != "" && txtDireccion.Text != "")
+                && txtPass.Text != "" && cbGenero.SelectedIndex > 0 && cbEstadoC.SelectedIndex > 0 && txtTelefono.Text != "" && txtDireccion.Text != "")
             {
                 _aspirante.nombres = txtNombres.Text;
                 _aspirante.apellidos = txtApellidos.Text;
@@ -120,6 +122,9 @@ namespace BOLTRA_UES.Interfaz
 
                 _aspiranteBL.AgregarAspirante(_aspirante);
                 FrmSuccess.confirmacionForm("EL ASPIRANTE FUE \n" + "REGISTRADO CON EXITO");
+                FrmLogin login = new FrmLogin();
+                this.Hide();
+                login.ShowDialog();
             }
             else
             {

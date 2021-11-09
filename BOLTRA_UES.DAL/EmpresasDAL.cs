@@ -30,27 +30,96 @@ namespace BOLTRA_UES.DAL
             }
         }
 
-        public List<EmpresasEN> ObtenerEmpresas()
+        public List<EmpresasEN> ListarEmpresas(string pNombre)
         {
+            BDComun Conexion = new BDComun();
+
+            MySqlDataReader LeerFilas;
+            MySqlConnection conexion = Conexion.establecerConxion();
+            //conexion.Open();
+            string sql = "SELECT * FROM  empresas WHERE Nombre LIKE CONCAT('%', @nombre, '%')";
+
+            MySqlCommand comando = new MySqlCommand(sql, conexion);
+            comando.Parameters.AddWithValue("@nombre", pNombre);
+            LeerFilas = comando.ExecuteReader();
+
             List<EmpresasEN> _listaEmpresas = new List<EmpresasEN>();
 
-            BDComun conexion = new BDComun();
-            MySqlDataReader reader;
-            MySqlCommand comando = new MySqlCommand(string.Format("SELECT * FROM empresas"), conexion.establecerConxion());
-            reader = comando.ExecuteReader();
-
-            while (reader.Read())
+            while (LeerFilas.Read())
             {
-                EmpresasEN obj = new EmpresasEN();
-                obj.id = reader.GetInt64(0);
-                obj.nombre = reader.GetString(1);
-                obj.rubro = reader.GetString(2);
-                obj.descripcion = reader.GetString(3);
+                _listaEmpresas.Add(new EmpresasEN
+                {
+                    id = LeerFilas.GetInt64(0),
+                    nombre = LeerFilas.GetString(1),
+                    rubro = LeerFilas.GetString(2),
+                    descripcion = LeerFilas.GetString(3),
+                });
 
-                _listaEmpresas.Add(obj);
             }
+            LeerFilas.Close();
             return _listaEmpresas;
+        }
 
+        public int BuscarEmpresa(string pNombre)
+        {
+            int resultado;
+            BDComun Conexion = new BDComun();
+
+            MySqlDataReader reader;
+            MySqlConnection conexion = Conexion.establecerConxion();
+            //conexion.Open();
+
+            string sql = "SELECT * FROM empresas WHERE Nombre= @nombre";
+
+            MySqlCommand comando = new MySqlCommand(sql, conexion);
+            comando.Parameters.AddWithValue("@nombre", pNombre);
+            reader = comando.ExecuteReader();
+            AspiranteEN asp = new AspiranteEN();
+
+            if (reader.Read())
+            {
+                resultado = 1;
+            }
+            else
+            {
+                resultado = 0;
+            }
+            conexion.Close();
+            return resultado;
+        }
+
+        public int ModificarEmpresa(EmpresasEN pAspirante)
+        {
+            BDComun Conexion = new BDComun();
+
+            MySqlDataReader reader;
+            MySqlConnection conexion = Conexion.establecerConxion();
+            //conexion.Open();
+
+            string sql = "UPDATE Aspirante SET nombre=@nombre, rubro=@rubro, descripcion=@descripcion";
+
+            MySqlCommand comando = new MySqlCommand(sql, conexion);
+            comando.Parameters.AddWithValue("@nombres", pAspirante.nombre);
+            comando.Parameters.AddWithValue("@apellidos", pAspirante.rubro);
+            comando.Parameters.AddWithValue("@dui", pAspirante.descripcion);
+            int resultado = comando.ExecuteNonQuery();
+            conexion.Close();
+            return resultado;
+        }
+
+        public int EliminarEmpresa(Int64 pidEmpresa)
+        {
+            BDComun Conexion = new BDComun();
+
+            MySqlDataReader reader;
+            MySqlConnection conexion = Conexion.establecerConxion();
+            //conexion.Open();
+
+            MySqlCommand comando = new MySqlCommand(string.Format("DELETE FROM empresas WHERE id = {0}",pidEmpresa), conexion);
+
+            int resultado = comando.ExecuteNonQuery();
+            conexion.Close();
+            return resultado;
         }
     }
 }

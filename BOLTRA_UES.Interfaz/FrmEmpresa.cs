@@ -27,7 +27,20 @@ namespace BOLTRA_UES.Interfaz
 
         string nombre, rubro, descripcion;
         int id = 0;
+        public string idEmpresa;
         int renglon = 0;
+
+        string nombreE, rubroE, descripcionE;
+        int idE = 0;
+
+
+        public void Limpiar()
+        {
+            txtCodigo.Text = "";
+            txtNombre.Text = "";
+            txtRubro.Text = "";
+            txtDescripcion.Text = "";
+        }
 
         public void inhabilitarTxt()
         {
@@ -46,49 +59,95 @@ namespace BOLTRA_UES.Interfaz
 
         private void FrmEmpresa_Load(object sender, EventArgs e)
         {
-            Obtener();
-            inhabilitarTxt();
+            Buscar(" ");
+            txtCodigo.Enabled = false;
         }
 
-        private void tablaEmpresas_CellClick(object sender, DataGridViewCellEventArgs e)
+        
+
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
-            renglon = e.RowIndex;
-        }
-
-        private void tablaEmpresas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            string nombre, rubro, descripcion, id;
-
-            id = tablaEmpresas.Rows[renglon].Cells["Codigo"].Value.ToString();
-            nombre = tablaEmpresas.Rows[renglon].Cells["NombreEmpresa"].Value.ToString();
-            rubro = tablaEmpresas.Rows[renglon].Cells["RubroEmpresa"].Value.ToString();
-            descripcion = tablaEmpresas.Rows[renglon].Cells["DescripcionE"].Value.ToString();
-
-            txtCodigo.Text = id;
-            txtNombre.Text = nombre;
-            txtRubro.Text = rubro;
-            txtDescripcion.Text = descripcion;
+            //Buscar(txtBuscar.Text);
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            habilitarTxt();
+            if (tablaEmpresas.SelectedRows.Count > 0)
+            {
+                txtCodigo.Text = tablaEmpresas.CurrentRow.Cells[0].Value.ToString();
+                txtNombre.Text = tablaEmpresas.CurrentRow.Cells[1].Value.ToString();
+                txtRubro.Text = tablaEmpresas.CurrentRow.Cells[2].Value.ToString();
+                txtDescripcion.Text = tablaEmpresas.CurrentRow.Cells[3].Value.ToString();
+                
+            }
+            else
+            {
+                FrmError.confirmacionForm("SELECCIONE LA FILA A EDITAR");
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (tablaEmpresas.SelectedRows.Count > 0)
+            {
+                _empresa.id = Convert.ToInt32(tablaEmpresas.CurrentRow.Cells[0].Value.ToString());
+
+                DialogResult resultado = new DialogResult();
+                Form mensaje = new FrmWarning("¿ESTA SEGURO QUE QUIERE\n" + "ELIMINAR EL REGISTRO?");
+                resultado = mensaje.ShowDialog();
+
+                if (resultado == DialogResult.OK)
+                {
+                    _empresasBL.EliminarEmpresa(_empresa.id);
+                    Buscar("");
+                }
+                
+            }
+            else
+            {
+                FrmError.confirmacionForm("SELECCIONE LA FILA A EDITAR");
+            }
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if (txtNombre.Text != "" && txtRubro.Text != "" && txtDescripcion.Text != "")
+            {
+                _empresa.nombre = txtNombre.Text.ToUpper();
+                _empresa.rubro = txtRubro.Text.ToUpper();
+                _empresa.descripcion = txtDescripcion.Text.ToUpper();
+
+                _empresasBL.ModificarEmpresa(_empresa);
+                FrmSuccess.confirmacionForm("EL PERFIL FUE \n" + "MODIFICADO CON EXITO");
+                Limpiar();
+                
+            }
+            else
+            {
+                FrmError.confirmacionForm("LLENE TODOS LOS CAMPOS");
+            }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             if (txtNombre.Text != "" && txtRubro.Text != "" && txtDescripcion.Text != "")
             {
-                _empresa.nombre = txtNombre.Text;
-                _empresa.rubro = txtRubro.Text;
-                _empresa.descripcion = txtDescripcion.Text;
+                _empresa.nombre = txtNombre.Text.ToUpper();
+                _empresa.rubro = txtRubro.Text.ToUpper();
+                _empresa.descripcion = txtDescripcion.Text.ToUpper();
                 _empresasBL.AgregarEmpresa(_empresa);
                 FrmSuccess.confirmacionForm("LA EMPRESA FUE \n" + "REGISTRADA CON EXITO");
+                Limpiar();
+                Buscar("");
             }
-
         }
 
-        private void Obtener()
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            Buscar(txtBuscar.Text);
+        }
+
+        private void LlenarData()
         {
             BDComun conexion = new BDComun();
             MySqlCommand query = new MySqlCommand();
@@ -108,6 +167,9 @@ namespace BOLTRA_UES.Interfaz
             }
         }
 
-        
+        private void Buscar(string pNombre)
+        {
+            tablaEmpresas.DataSource = _empresasBL.ListarEmpresas(pNombre);
+        }
     }
 }

@@ -88,6 +88,7 @@
     <Compile Include="AdministradorDAL.cs" />
     <Compile Include="AspiranteDAL.cs" />
     <Compile Include="BDComun.cs" />
+    <Compile Include="EmpleoDAL.cs" />
     <Compile Include="EmpresasDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
