@@ -47,7 +47,6 @@ namespace BOLTRA_UES.Interfaz
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.txtUserN = new System.Windows.Forms.TextBox();
@@ -61,7 +60,6 @@ namespace BOLTRA_UES.Interfaz
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.btnArchivo = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
@@ -210,7 +208,7 @@ namespace BOLTRA_UES.Interfaz
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(483, 187);
+            this.label6.Location = new System.Drawing.Point(477, 106);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(117, 21);
             this.label6.TabIndex = 20;
@@ -230,7 +228,7 @@ namespace BOLTRA_UES.Interfaz
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(488, 265);
+            this.label8.Location = new System.Drawing.Point(477, 187);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(59, 21);
             this.label8.TabIndex = 22;
@@ -240,7 +238,7 @@ namespace BOLTRA_UES.Interfaz
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(488, 355);
+            this.label9.Location = new System.Drawing.Point(477, 265);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(89, 21);
             this.label9.TabIndex = 23;
@@ -250,21 +248,11 @@ namespace BOLTRA_UES.Interfaz
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(488, 437);
+            this.label10.Location = new System.Drawing.Point(477, 354);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(147, 21);
             this.label10.TabIndex = 24;
             this.label10.Text = "Numero de Telefono";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(488, 106);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(89, 21);
-            this.label11.TabIndex = 25;
-            this.label11.Text = "Curriculum";
             // 
             // txtPass
             // 
@@ -309,7 +297,7 @@ namespace BOLTRA_UES.Interfaz
             this.txtTipoU.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTipoU.Enabled = false;
             this.txtTipoU.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipoU.Location = new System.Drawing.Point(487, 216);
+            this.txtTipoU.Location = new System.Drawing.Point(481, 135);
             this.txtTipoU.Name = "txtTipoU";
             this.txtTipoU.Size = new System.Drawing.Size(255, 25);
             this.txtTipoU.TabIndex = 31;
@@ -318,7 +306,7 @@ namespace BOLTRA_UES.Interfaz
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(482, 211);
+            this.pictureBox7.Location = new System.Drawing.Point(476, 130);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(270, 36);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -349,7 +337,7 @@ namespace BOLTRA_UES.Interfaz
             "---SELECCIONE UN OPCION---",
             "MASCULINO",
             "FEMENINO"});
-            this.cbGenero.Location = new System.Drawing.Point(492, 291);
+            this.cbGenero.Location = new System.Drawing.Point(481, 213);
             this.cbGenero.Name = "cbGenero";
             this.cbGenero.Size = new System.Drawing.Size(256, 33);
             this.cbGenero.TabIndex = 35;
@@ -357,7 +345,7 @@ namespace BOLTRA_UES.Interfaz
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(485, 289);
+            this.pictureBox8.Location = new System.Drawing.Point(474, 211);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(270, 36);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -380,7 +368,7 @@ namespace BOLTRA_UES.Interfaz
             "CASADO/A",
             "DIVORCIADO/A",
             "VIUDO/A"});
-            this.cbEstadoC.Location = new System.Drawing.Point(492, 381);
+            this.cbEstadoC.Location = new System.Drawing.Point(481, 291);
             this.cbEstadoC.Name = "cbEstadoC";
             this.cbEstadoC.Size = new System.Drawing.Size(256, 33);
             this.cbEstadoC.TabIndex = 37;
@@ -388,7 +376,7 @@ namespace BOLTRA_UES.Interfaz
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(485, 379);
+            this.pictureBox9.Location = new System.Drawing.Point(474, 289);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(270, 36);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -399,7 +387,7 @@ namespace BOLTRA_UES.Interfaz
             // 
             this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefono.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(492, 466);
+            this.txtTelefono.Location = new System.Drawing.Point(481, 383);
             this.txtTelefono.MaxLength = 9;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(255, 25);
@@ -410,52 +398,18 @@ namespace BOLTRA_UES.Interfaz
             // pictureBox10
             // 
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(487, 461);
+            this.pictureBox10.Location = new System.Drawing.Point(476, 378);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(270, 36);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 38;
             this.pictureBox10.TabStop = false;
             // 
-            // btnArchivo
-            // 
-            this.btnArchivo.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
-            this.btnArchivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
-            this.btnArchivo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnArchivo.BorderRadius = 7;
-            this.btnArchivo.ButtonText = "   ABRIR ARCHIVO";
-            this.btnArchivo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnArchivo.DisabledColor = System.Drawing.Color.Gray;
-            this.btnArchivo.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnArchivo.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnArchivo.Iconimage")));
-            this.btnArchivo.Iconimage_right = null;
-            this.btnArchivo.Iconimage_right_Selected = null;
-            this.btnArchivo.Iconimage_Selected = null;
-            this.btnArchivo.IconMarginLeft = 0;
-            this.btnArchivo.IconMarginRight = 0;
-            this.btnArchivo.IconRightVisible = true;
-            this.btnArchivo.IconRightZoom = 0D;
-            this.btnArchivo.IconVisible = true;
-            this.btnArchivo.IconZoom = 50D;
-            this.btnArchivo.IsTab = false;
-            this.btnArchivo.Location = new System.Drawing.Point(485, 130);
-            this.btnArchivo.Name = "btnArchivo";
-            this.btnArchivo.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
-            this.btnArchivo.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
-            this.btnArchivo.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnArchivo.selected = false;
-            this.btnArchivo.Size = new System.Drawing.Size(172, 36);
-            this.btnArchivo.TabIndex = 40;
-            this.btnArchivo.Text = "   ABRIR ARCHIVO";
-            this.btnArchivo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnArchivo.Textcolor = System.Drawing.Color.Black;
-            this.btnArchivo.TextFont = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(488, 528);
+            this.label12.Location = new System.Drawing.Point(475, 443);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(75, 21);
             this.label12.TabIndex = 41;
@@ -464,9 +418,9 @@ namespace BOLTRA_UES.Interfaz
             // pictureBox11
             // 
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(487, 552);
+            this.pictureBox11.Location = new System.Drawing.Point(474, 467);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(270, 93);
+            this.pictureBox11.Size = new System.Drawing.Size(270, 116);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 42;
             this.pictureBox11.TabStop = false;
@@ -475,7 +429,7 @@ namespace BOLTRA_UES.Interfaz
             // 
             this.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDireccion.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(495, 562);
+            this.txtDireccion.Location = new System.Drawing.Point(482, 477);
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(255, 72);
@@ -561,7 +515,6 @@ namespace BOLTRA_UES.Interfaz
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.btnArchivo);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.cbEstadoC);
@@ -575,7 +528,6 @@ namespace BOLTRA_UES.Interfaz
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -633,7 +585,6 @@ namespace BOLTRA_UES.Interfaz
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.TextBox txtUserN;
@@ -647,7 +598,6 @@ namespace BOLTRA_UES.Interfaz
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.PictureBox pictureBox10;
-        private Bunifu.Framework.UI.BunifuFlatButton btnArchivo;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.TextBox txtDireccion;

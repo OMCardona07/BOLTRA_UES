@@ -117,7 +117,7 @@ namespace BOLTRA_UES.Interfaz
             // 
             // btnAplicar
             // 
-            this.btnAplicar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(32)))));
+            this.btnAplicar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
             this.btnAplicar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
             this.btnAplicar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAplicar.BorderRadius = 7;
@@ -141,7 +141,7 @@ namespace BOLTRA_UES.Interfaz
             this.btnAplicar.Location = new System.Drawing.Point(778, 565);
             this.btnAplicar.Name = "btnAplicar";
             this.btnAplicar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
-            this.btnAplicar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
+            this.btnAplicar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.btnAplicar.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnAplicar.selected = false;
             this.btnAplicar.Size = new System.Drawing.Size(356, 39);
