@@ -26,5 +26,20 @@ namespace BOLTRA_UES.BL
         {
             return DAL.listarEmpleos();
         }
+
+        public DataTable ListarPostulaciones(int pPostulacion)
+        {
+            return DAL.listarPostulaciones(pPostulacion);
+        }
+
+        public DataTable ListarPostulacionesAdmin()
+        {
+            return DAL.listarPostulacionesAdmin();
+        }
+
+        public int CambiarEstado(PostulacionesEN pPostulacion)
+        {
+            return DAL.CambiarEstado(pPostulacion);
+        }
     }
 }

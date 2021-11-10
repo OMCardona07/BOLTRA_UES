@@ -109,12 +109,6 @@
     <Compile Include="FrmAplicarEmpleo.Designer.cs">
       <DependentUpon>FrmAplicarEmpleo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmBuscarOfer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmBuscarOfer.Designer.cs">
-      <DependentUpon>FrmBuscarOfer.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmEmpleo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,11 +157,23 @@
     <Compile Include="FrmRegistroA.Designer.cs">
       <DependentUpon>FrmRegistroA.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSeguimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSeguimiento.Designer.cs">
+      <DependentUpon>FrmSeguimiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSuccess.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmSuccess.Designer.cs">
       <DependentUpon>FrmSuccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVerPostulaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVerPostulaciones.Designer.cs">
+      <DependentUpon>FrmVerPostulaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmWarning.cs">
       <SubType>Form</SubType>
@@ -179,9 +185,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmAplicarEmpleo.resx">
       <DependentUpon>FrmAplicarEmpleo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmBuscarOfer.resx">
-      <DependentUpon>FrmBuscarOfer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEmpleo.resx">
       <DependentUpon>FrmEmpleo.cs</DependentUpon>
@@ -207,8 +210,14 @@
     <EmbeddedResource Include="FrmRegistroA.resx">
       <DependentUpon>FrmRegistroA.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmSeguimiento.resx">
+      <DependentUpon>FrmSeguimiento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmSuccess.resx">
       <DependentUpon>FrmSuccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVerPostulaciones.resx">
+      <DependentUpon>FrmVerPostulaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmWarning.resx">
       <DependentUpon>FrmWarning.cs</DependentUpon>

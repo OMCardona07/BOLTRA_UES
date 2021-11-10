@@ -67,5 +67,61 @@ namespace BOLTRA_UES.DAL
 
             return tabla;
         }
+
+        public DataTable listarPostulaciones(int pIdAspirante)
+        {
+            BDComun Conexion = new BDComun();
+            MySqlConnection conexion = Conexion.establecerConxion();
+            DataTable tabla = new DataTable();
+            MySqlDataReader LeerFilas;
+            string sql = "ListarPostulacionesA";
+            MySqlCommand cmd = new MySqlCommand(sql, conexion);
+            cmd.Parameters.AddWithValue("@busqueda", pIdAspirante);
+            cmd.CommandType = CommandType.StoredProcedure;
+            LeerFilas = cmd.ExecuteReader();
+            tabla.Load(LeerFilas);
+
+            LeerFilas.Close();
+            conexion.Close();
+
+            return tabla;
+        }
+
+        public DataTable listarPostulacionesAdmin()
+        {
+            BDComun Conexion = new BDComun();
+            MySqlConnection conexion = Conexion.establecerConxion();
+            DataTable tabla = new DataTable();
+            MySqlDataReader LeerFilas;
+            string sql = "ListarPostulacionesAdmin";
+            MySqlCommand cmd = new MySqlCommand(sql, conexion);
+            cmd.CommandType = CommandType.StoredProcedure;
+            LeerFilas = cmd.ExecuteReader();
+            tabla.Load(LeerFilas);
+
+            LeerFilas.Close();
+            conexion.Close();
+
+            return tabla;
+        }
+
+        public int CambiarEstado(PostulacionesEN pPostulacion)
+        {
+            BDComun Conexion = new BDComun();
+
+            MySqlDataReader reader;
+            MySqlConnection conexion = Conexion.establecerConxion();
+            //conexion.Open();
+
+            string sql = "UPDATE Postulaciones SET status = @status WHERE id = @id";
+
+            MySqlCommand comando = new MySqlCommand(sql, conexion);
+            comando.Parameters.AddWithValue("@id", pPostulacion.id);
+            comando.Parameters.AddWithValue("@status", pPostulacion.status);
+
+            int resultado = comando.ExecuteNonQuery();
+            conexion.Close();
+            return resultado;
+        }
     }
 }

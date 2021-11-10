@@ -44,7 +44,6 @@ C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_UES.I
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_UES.Interfaz.FrmSuccess.resources
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_UES.Interfaz.FrmWarning.resources
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_UES.Interfaz.FrmError.resources
-C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_UES.Interfaz.FrmBuscarOfer.resources
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_UES.Interfaz.FrmEmpleo.resources
 C:\Users\SophieMH\Source\Repos\BOLTRA_UES\BOLTRA_UES.Interfaz\bin\Debug\BOLTRA_UES.Interfaz.exe.config
 C:\Users\SophieMH\Source\Repos\BOLTRA_UES\BOLTRA_UES.Interfaz\bin\Debug\BOLTRA_UES.Interfaz.exe
@@ -100,4 +99,5 @@ C:\Users\user\Source\Repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_UES.I
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_UES.Interfaz.FrmAplicarEmpleo.resources
-C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_UES.Interfaz.csproj.CopyComplete
+C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_UES.Interfaz.FrmVerPostulaciones.resources
+C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_UES.Interfaz.FrmSeguimiento.resources

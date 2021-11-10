@@ -63,6 +63,13 @@ namespace BOLTRA_UES.Interfaz
                 FrmSuccess.confirmacionForm("TE HAS POSTULADO A LA \n" + "OFERTA DE TRABAJO");
                 Limpiar();
             }
+            else
+                FrmError.confirmacionForm("SELECCIONE UNA OFERTA DANDO \n" + "DOBLE CLICK A LA TABLA");
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            BuscarEmpleos(txtBuscar.Text);
         }
     }
 }

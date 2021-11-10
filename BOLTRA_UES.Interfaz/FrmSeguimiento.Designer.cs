@@ -1,7 +1,7 @@
 ﻿
 namespace BOLTRA_UES.Interfaz
 {
-    partial class FrmAplicarEmpleo
+    partial class FrmSeguimiento
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,14 @@ namespace BOLTRA_UES.Interfaz
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAplicarEmpleo));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSeguimiento));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tablaEmpleos = new System.Windows.Forms.DataGridView();
-            this.btnAplicar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnGuardar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.label5 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtPuesto = new System.Windows.Forms.TextBox();
@@ -46,10 +47,9 @@ namespace BOLTRA_UES.Interfaz
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.txtStatus = new System.Windows.Forms.TextBox();
-            this.txtIdEmpleo = new System.Windows.Forms.TextBox();
+            this.txtAspirante = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.cbEstado = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaEmpleos)).BeginInit();
@@ -77,14 +77,14 @@ namespace BOLTRA_UES.Interfaz
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(430, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(294, 34);
+            this.label1.Size = new System.Drawing.Size(345, 34);
             this.label1.TabIndex = 3;
-            this.label1.Text = "FORMULARIO DE EMPLEOS";
+            this.label1.Text = "FORMULARIO DE SEGUIMIENTO";
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(42, 87);
+            this.pictureBox3.Location = new System.Drawing.Point(42, 75);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(30, 30);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -100,62 +100,72 @@ namespace BOLTRA_UES.Interfaz
             this.tablaEmpleos.BackgroundColor = System.Drawing.Color.White;
             this.tablaEmpleos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tablaEmpleos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tablaEmpleos.DefaultCellStyle = dataGridViewCellStyle2;
-            this.tablaEmpleos.Location = new System.Drawing.Point(36, 142);
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tablaEmpleos.DefaultCellStyle = dataGridViewCellStyle1;
+            this.tablaEmpleos.Location = new System.Drawing.Point(36, 130);
             this.tablaEmpleos.Name = "tablaEmpleos";
             this.tablaEmpleos.ReadOnly = true;
-            this.tablaEmpleos.Size = new System.Drawing.Size(590, 304);
+            this.tablaEmpleos.Size = new System.Drawing.Size(590, 384);
             this.tablaEmpleos.TabIndex = 85;
             this.tablaEmpleos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaEmpleos_CellDoubleClick);
             // 
-            // btnAplicar
+            // btnGuardar
             // 
-            this.btnAplicar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(32)))));
-            this.btnAplicar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
-            this.btnAplicar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAplicar.BorderRadius = 7;
-            this.btnAplicar.ButtonText = "APLICAR A OFERTA DE TRABAJO";
-            this.btnAplicar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAplicar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnAplicar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAplicar.ForeColor = System.Drawing.Color.Black;
-            this.btnAplicar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnAplicar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnAplicar.Iconimage")));
-            this.btnAplicar.Iconimage_right = null;
-            this.btnAplicar.Iconimage_right_Selected = null;
-            this.btnAplicar.Iconimage_Selected = null;
-            this.btnAplicar.IconMarginLeft = 0;
-            this.btnAplicar.IconMarginRight = 0;
-            this.btnAplicar.IconRightVisible = true;
-            this.btnAplicar.IconRightZoom = 0D;
-            this.btnAplicar.IconVisible = true;
-            this.btnAplicar.IconZoom = 70D;
-            this.btnAplicar.IsTab = false;
-            this.btnAplicar.Location = new System.Drawing.Point(778, 554);
-            this.btnAplicar.Name = "btnAplicar";
-            this.btnAplicar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
-            this.btnAplicar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
-            this.btnAplicar.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnAplicar.selected = false;
-            this.btnAplicar.Size = new System.Drawing.Size(356, 39);
-            this.btnAplicar.TabIndex = 84;
-            this.btnAplicar.Text = "APLICAR A OFERTA DE TRABAJO";
-            this.btnAplicar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAplicar.Textcolor = System.Drawing.Color.Black;
-            this.btnAplicar.TextFont = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAplicar.Click += new System.EventHandler(this.btnAplicar_Click);
+            this.btnGuardar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(32)))));
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
+            this.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGuardar.BorderRadius = 7;
+            this.btnGuardar.ButtonText = "GUARDAR MODIFICACIONES";
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGuardar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.Black;
+            this.btnGuardar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnGuardar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Iconimage")));
+            this.btnGuardar.Iconimage_right = null;
+            this.btnGuardar.Iconimage_right_Selected = null;
+            this.btnGuardar.Iconimage_Selected = null;
+            this.btnGuardar.IconMarginLeft = 0;
+            this.btnGuardar.IconMarginRight = 0;
+            this.btnGuardar.IconRightVisible = true;
+            this.btnGuardar.IconRightZoom = 0D;
+            this.btnGuardar.IconVisible = true;
+            this.btnGuardar.IconZoom = 70D;
+            this.btnGuardar.IsTab = false;
+            this.btnGuardar.Location = new System.Drawing.Point(780, 531);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
+            this.btnGuardar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
+            this.btnGuardar.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnGuardar.selected = false;
+            this.btnGuardar.Size = new System.Drawing.Size(355, 39);
+            this.btnGuardar.TabIndex = 84;
+            this.btnGuardar.Text = "GUARDAR MODIFICACIONES";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnGuardar.Textcolor = System.Drawing.Color.Black;
+            this.btnGuardar.TextFont = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(783, 387);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 25);
+            this.label5.TabIndex = 81;
+            this.label5.Text = "ESTADO";
             // 
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(778, 431);
+            this.pictureBox6.Location = new System.Drawing.Point(779, 331);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(356, 35);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -166,19 +176,18 @@ namespace BOLTRA_UES.Interfaz
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(782, 403);
+            this.label4.Location = new System.Drawing.Point(783, 303);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(234, 25);
+            this.label4.Size = new System.Drawing.Size(99, 25);
             this.label4.TabIndex = 79;
-            this.label4.Text = "ESTADO DE LA POSTULACION";
+            this.label4.Text = "ASPIRANTE";
             // 
             // txtPuesto
             // 
             this.txtPuesto.BackColor = System.Drawing.Color.White;
             this.txtPuesto.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPuesto.Enabled = false;
             this.txtPuesto.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPuesto.Location = new System.Drawing.Point(787, 236);
+            this.txtPuesto.Location = new System.Drawing.Point(788, 247);
             this.txtPuesto.Name = "txtPuesto";
             this.txtPuesto.Size = new System.Drawing.Size(334, 22);
             this.txtPuesto.TabIndex = 78;
@@ -186,7 +195,7 @@ namespace BOLTRA_UES.Interfaz
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(779, 229);
+            this.pictureBox5.Location = new System.Drawing.Point(780, 240);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(355, 35);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -197,7 +206,7 @@ namespace BOLTRA_UES.Interfaz
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(782, 201);
+            this.label3.Location = new System.Drawing.Point(783, 212);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(173, 25);
             this.label3.TabIndex = 76;
@@ -207,9 +216,8 @@ namespace BOLTRA_UES.Interfaz
             // 
             this.txtCodigo.BackColor = System.Drawing.Color.White;
             this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCodigo.Enabled = false;
             this.txtCodigo.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Location = new System.Drawing.Point(787, 137);
+            this.txtCodigo.Location = new System.Drawing.Point(787, 158);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(127, 22);
             this.txtCodigo.TabIndex = 75;
@@ -218,7 +226,7 @@ namespace BOLTRA_UES.Interfaz
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(782, 102);
+            this.label2.Location = new System.Drawing.Point(782, 123);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 25);
             this.label2.TabIndex = 74;
@@ -227,7 +235,7 @@ namespace BOLTRA_UES.Interfaz
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(780, 130);
+            this.pictureBox4.Location = new System.Drawing.Point(780, 151);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(146, 35);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -239,78 +247,73 @@ namespace BOLTRA_UES.Interfaz
             this.txtBuscar.BackColor = System.Drawing.Color.White;
             this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBuscar.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(78, 91);
+            this.txtBuscar.Location = new System.Drawing.Point(78, 79);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(543, 22);
             this.txtBuscar.TabIndex = 69;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(38, 85);
+            this.pictureBox2.Location = new System.Drawing.Point(38, 73);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(588, 35);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 68;
             this.pictureBox2.TabStop = false;
             // 
-            // txtStatus
+            // txtAspirante
             // 
-            this.txtStatus.BackColor = System.Drawing.Color.White;
-            this.txtStatus.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtStatus.Enabled = false;
-            this.txtStatus.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStatus.Location = new System.Drawing.Point(787, 438);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(334, 22);
-            this.txtStatus.TabIndex = 87;
-            this.txtStatus.Text = "POSTULADA";
-            // 
-            // txtIdEmpleo
-            // 
-            this.txtIdEmpleo.BackColor = System.Drawing.Color.White;
-            this.txtIdEmpleo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtIdEmpleo.Enabled = false;
-            this.txtIdEmpleo.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdEmpleo.Location = new System.Drawing.Point(787, 338);
-            this.txtIdEmpleo.Name = "txtIdEmpleo";
-            this.txtIdEmpleo.Size = new System.Drawing.Size(127, 22);
-            this.txtIdEmpleo.TabIndex = 90;
+            this.txtAspirante.BackColor = System.Drawing.Color.White;
+            this.txtAspirante.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAspirante.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAspirante.Location = new System.Drawing.Point(785, 338);
+            this.txtAspirante.Name = "txtAspirante";
+            this.txtAspirante.Size = new System.Drawing.Size(337, 22);
+            this.txtAspirante.TabIndex = 87;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(779, 331);
+            this.pictureBox1.Location = new System.Drawing.Point(779, 418);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 35);
+            this.pictureBox1.Size = new System.Drawing.Size(356, 35);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 89;
+            this.pictureBox1.TabIndex = 88;
             this.pictureBox1.TabStop = false;
             // 
-            // label5
+            // cbEstado
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(782, 303);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(224, 25);
-            this.label5.TabIndex = 88;
-            this.label5.Text = "ID DEL PUESTO DE TRABAJO";
+            this.cbEstado.BackColor = System.Drawing.Color.White;
+            this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEstado.DropDownWidth = 240;
+            this.cbEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbEstado.Font = new System.Drawing.Font("Poppins", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEstado.ForeColor = System.Drawing.Color.Gray;
+            this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.ItemHeight = 25;
+            this.cbEstado.Items.AddRange(new object[] {
+            "POSTULADA",
+            "EN PROCESO",
+            "FINALIZADA"});
+            this.cbEstado.Location = new System.Drawing.Point(788, 419);
+            this.cbEstado.Name = "cbEstado";
+            this.cbEstado.Size = new System.Drawing.Size(334, 33);
+            this.cbEstado.TabIndex = 89;
             // 
-            // FrmAplicarEmpleo
+            // FrmSeguimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1170, 640);
-            this.Controls.Add(this.txtIdEmpleo);
+            this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtStatus);
+            this.Controls.Add(this.txtAspirante);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.tablaEmpleos);
-            this.Controls.Add(this.btnAplicar);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtPuesto);
@@ -323,9 +326,9 @@ namespace BOLTRA_UES.Interfaz
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmAplicarEmpleo";
-            this.Text = "FrmAplicarEmpleo";
-            this.Load += new System.EventHandler(this.FrmAplicarEmpleo_Load);
+            this.Name = "FrmSeguimiento";
+            this.Text = "FrmSeguimiento";
+            this.Load += new System.EventHandler(this.FrmSeguimiento_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -346,7 +349,8 @@ namespace BOLTRA_UES.Interfaz
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DataGridView tablaEmpleos;
-        private Bunifu.Framework.UI.BunifuFlatButton btnAplicar;
+        private Bunifu.Framework.UI.BunifuFlatButton btnGuardar;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtPuesto;
@@ -357,9 +361,8 @@ namespace BOLTRA_UES.Interfaz
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox txtStatus;
-        private System.Windows.Forms.TextBox txtIdEmpleo;
+        private System.Windows.Forms.TextBox txtAspirante;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label5;
+        public System.Windows.Forms.ComboBox cbEstado;
     }
 }
