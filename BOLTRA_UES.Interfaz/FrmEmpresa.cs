@@ -20,6 +20,9 @@ namespace BOLTRA_UES.Interfaz
         public FrmEmpresa()
         {
             InitializeComponent();
+            tablaEmpresas.DefaultCellStyle.Font = new Font("Poppins", 9);
+            tablaEmpresas.ColumnHeadersDefaultCellStyle.Font = new Font("Poppins", 9, FontStyle.Bold);
+            txtNombre.Focus();
         }
 
         EmpresasEN _empresa = new EmpresasEN();

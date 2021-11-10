@@ -17,6 +17,8 @@ namespace BOLTRA_UES.Interfaz
         public FrmSeguimiento()
         {
             InitializeComponent();
+            tablaEmpleos.DefaultCellStyle.Font = new Font("Poppins", 9);
+            tablaEmpleos.ColumnHeadersDefaultCellStyle.Font = new Font("Poppins", 9, FontStyle.Bold);
         }
 
         private void Limpiar()

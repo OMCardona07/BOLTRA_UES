@@ -262,7 +262,7 @@ namespace BOLTRA_UES.Interfaz
             // 
             // wrapper
             // 
-            this.wrapper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(243)))), ((int)(((byte)(239)))));
+            this.wrapper.BackColor = System.Drawing.Color.White;
             this.wrapper.Controls.Add(this.lblBienvenida);
             this.wrapper.Dock = System.Windows.Forms.DockStyle.Fill;
             this.wrapper.Location = new System.Drawing.Point(270, 60);

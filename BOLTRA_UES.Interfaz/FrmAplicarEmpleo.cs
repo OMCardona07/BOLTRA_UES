@@ -17,6 +17,8 @@ namespace BOLTRA_UES.Interfaz
         public FrmAplicarEmpleo()
         {
             InitializeComponent();
+            tablaEmpleos.DefaultCellStyle.Font = new Font("Poppins", 9);
+            tablaEmpleos.ColumnHeadersDefaultCellStyle.Font = new Font("Poppins", 9, FontStyle.Bold);
         }
 
         PostulacionesEN _postulacion = new PostulacionesEN();
@@ -24,7 +26,6 @@ namespace BOLTRA_UES.Interfaz
 
         public void Limpiar()
         {
-            txtCodigo.Text = "";
             txtPuesto.Text = "";
             txtIdEmpleo.Text = "";
             txtStatus.Text = "";
@@ -49,6 +50,7 @@ namespace BOLTRA_UES.Interfaz
         {
             txtIdEmpleo.Text = tablaEmpleos.CurrentRow.Cells[0].Value.ToString();
             txtPuesto.Text = tablaEmpleos.CurrentRow.Cells[1].Value.ToString();
+            txtDescripcion.Text = tablaEmpleos.CurrentRow.Cells[3].Value.ToString();
             txtStatus.Text = "POSTULADA";
         }
 

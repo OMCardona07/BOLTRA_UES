@@ -19,6 +19,9 @@ namespace BOLTRA_UES.Interfaz
         public FrmEmpleo()
         {
             InitializeComponent();
+            tablaEmpleos.DefaultCellStyle.Font = new Font("Poppins", 9);
+            tablaEmpleos.ColumnHeadersDefaultCellStyle.Font = new Font("Poppins", 9, FontStyle.Bold);
+            txtNombre.Focus();
         }
 
         
