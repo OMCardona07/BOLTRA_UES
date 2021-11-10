@@ -64,7 +64,7 @@ namespace BOLTRA_UES.Interfaz
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(270, 615);
+            this.sidebar.Size = new System.Drawing.Size(270, 700);
             this.sidebar.TabIndex = 1;
             // 
             // btnPostulacion
@@ -212,7 +212,7 @@ namespace BOLTRA_UES.Interfaz
             this.shapeContainer2.Name = "shapeContainer2";
             this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.lineShape1});
-            this.shapeContainer2.Size = new System.Drawing.Size(270, 615);
+            this.shapeContainer2.Size = new System.Drawing.Size(270, 700);
             this.shapeContainer2.TabIndex = 10;
             this.shapeContainer2.TabStop = false;
             // 
@@ -254,7 +254,7 @@ namespace BOLTRA_UES.Interfaz
             this.wrapper.Dock = System.Windows.Forms.DockStyle.Fill;
             this.wrapper.Location = new System.Drawing.Point(270, 60);
             this.wrapper.Name = "wrapper";
-            this.wrapper.Size = new System.Drawing.Size(1170, 555);
+            this.wrapper.Size = new System.Drawing.Size(1170, 640);
             this.wrapper.TabIndex = 3;
             // 
             // lblBienvenida
@@ -274,7 +274,7 @@ namespace BOLTRA_UES.Interfaz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1440, 615);
+            this.ClientSize = new System.Drawing.Size(1440, 700);
             this.Controls.Add(this.wrapper);
             this.Controls.Add(this.header);
             this.Controls.Add(this.sidebar);

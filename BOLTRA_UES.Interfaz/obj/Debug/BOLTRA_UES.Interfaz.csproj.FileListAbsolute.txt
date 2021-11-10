@@ -99,4 +99,5 @@ C:\Users\user\Source\Repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_UES.I
 C:\Users\user\Source\Repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_UES.Interfaz.FrmPerfil.resources
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_UES.Interfaz.FrmAplicarEmpleo.resources
 C:\Users\user\source\repos\BOLTRA_UES\BOLTRA_UES.Interfaz\obj\Debug\BOLTRA_UES.Interfaz.csproj.CopyComplete

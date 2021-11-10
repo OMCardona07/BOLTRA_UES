@@ -45,6 +45,7 @@
     <Compile Include="AspiranteBL.cs" />
     <Compile Include="EmpleoBL.cs" />
     <Compile Include="EmpresasBL.cs" />
+    <Compile Include="PostulacionesBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

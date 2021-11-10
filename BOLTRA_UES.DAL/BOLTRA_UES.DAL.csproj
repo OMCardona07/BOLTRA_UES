@@ -90,6 +90,7 @@
     <Compile Include="BDComun.cs" />
     <Compile Include="EmpleoDAL.cs" />
     <Compile Include="EmpresasDAL.cs" />
+    <Compile Include="PostulacionesDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
