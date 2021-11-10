@@ -30,5 +30,10 @@ namespace BOLTRA_UES.BL
         {
             return DAL.Loging(pUser, pPass);
         }
+
+        public List<AspiranteEN> RecuperarDatos()
+        {
+            return DAL.RecuperarDatos();
+        }
     }
 }

@@ -21,8 +21,7 @@ namespace BOLTRA_UES.Interfaz
             InitializeComponent();
         }
 
-        /*int id;
-        string nombre, rubro, descripcion;*/
+        
 
 
         public void Limpiar()
@@ -32,18 +31,6 @@ namespace BOLTRA_UES.Interfaz
             txtDescripcion.Text = "";
         }
 
-        public void inhabilitarTxt()
-        {
-            txtCodigo.Enabled = false;
-            txtNombre.Enabled = false;
-            txtDescripcion.Enabled = false;
-        }
-
-        public void habilitarTxt()
-        {
-            txtNombre.Enabled = true;
-            txtDescripcion.Enabled = true;
-        }
 
         EmpleoBL _empleoBL = new EmpleoBL();
         EmpleoEN _empleo = new EmpleoEN();
@@ -58,12 +45,15 @@ namespace BOLTRA_UES.Interfaz
                 _empleoBL.AgregarEmpleo(_empleo);
                 FrmSuccess.confirmacionForm("LA EMPRESA FUE \n" + "REGISTRADA CON EXITO");
                 Limpiar();
+                ListarEmpleos();
             }
         }
 
         private void FrmEmpleo_Load(object sender, EventArgs e)
         {
+            txtCodigo.Enabled = false;
             LlenarData();
+            ListarEmpleos();
         }
 
         private void LlenarData()
@@ -80,8 +70,87 @@ namespace BOLTRA_UES.Interfaz
             cbEmpresas.ValueMember = "id";
             cbEmpresas.DisplayMember = "nombre";
             cbEmpresas.Items.Insert(0, "--SELECCIONE UNA EMPRESA--");
+            cbEmpresas.SelectedIndex = 0;
 
             cbEmpresas.DataSource = dt;
+        }
+
+        private void ListarEmpleos()
+        {
+            tablaEmpleos.DataSource = _empleoBL.ListarEmpleo();
+        }
+
+        private void BuscarEmpleos(string pNombre)
+        {
+            tablaEmpleos.DataSource = _empleoBL.BuscarEmpleo(pNombre);
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            BuscarEmpleos(txtBuscar.Text);
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (tablaEmpleos.SelectedRows.Count > 0)
+            {
+                txtCodigo.Text = tablaEmpleos.CurrentRow.Cells[0].Value.ToString();
+                txtNombre.Text = tablaEmpleos.CurrentRow.Cells[1].Value.ToString();
+                cbEmpresas.Text = tablaEmpleos.CurrentRow.Cells[3].Value.ToString();
+                label1.Text = tablaEmpleos.CurrentRow.Cells[3].Value.ToString();
+                txtDescripcion.Text = tablaEmpleos.CurrentRow.Cells[4].Value.ToString();
+
+            }
+            else
+            {
+                FrmError.confirmacionForm("SELECCIONE LA FILA A EDITAR");
+            }
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if (txtNombre.Text != ""  && txtDescripcion.Text != "")
+            {
+                _empleo.id = Convert.ToInt64(txtCodigo.Text);
+                _empleo.nombre = txtNombre.Text.ToUpper();
+                _empleo.idEmpresa = Convert.ToInt32(cbEmpresas.SelectedValue);
+                _empleo.descripcion = txtDescripcion.Text.ToUpper();
+
+                if(_empleo.id != 0)
+                {
+                    _empleoBL.ModificarEmpleo(_empleo);
+                    FrmSuccess.confirmacionForm("EL PERFIL FUE \n" + "MODIFICADO CON EXITO");
+                    Limpiar();
+                    ListarEmpleos();
+                }
+            }
+            else
+            {
+                FrmError.confirmacionForm("LLENE TODOS LOS CAMPOS");
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (tablaEmpleos.SelectedRows.Count > 0)
+            {
+                _empleo.id = Convert.ToInt32(tablaEmpleos.CurrentRow.Cells[0].Value.ToString());
+
+                DialogResult resultado = new DialogResult();
+                Form mensaje = new FrmWarning("¿ESTA SEGURO QUE QUIERE\n" + "ELIMINAR EL REGISTRO?");
+                resultado = mensaje.ShowDialog();
+
+                if (resultado == DialogResult.OK)
+                {
+                    _empleoBL.EliminarEmpleo(_empleo.id);
+                    ListarEmpleos();
+                }
+
+            }
+            else
+            {
+                FrmError.confirmacionForm("SELECCIONE LA FILA A EDITAR");
+            }
         }
     }
 }

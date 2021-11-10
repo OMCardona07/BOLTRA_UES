@@ -71,7 +71,7 @@ namespace BOLTRA_UES.DAL
             MySqlConnection conexion = Conexion.establecerConxion();
             //conexion.Open();
 
-            string sql = "SELECT nombres, apellidos, dui, fechaN, userN, pass," +
+            string sql = "SELECT idA, nombres, apellidos, dui, fechaN, userN, pass," +
                 "tipoUser, genero, estadoC, telefono, direccion FROM Aspirante WHERE userN= @usuario and pass=  @pass";
 
             MySqlCommand comando = new MySqlCommand(sql, conexion);
@@ -83,17 +83,18 @@ namespace BOLTRA_UES.DAL
             {
                 while (reader.Read())
                 {
-                    Session.nombres = reader.GetString(0);
-                    Session.apellidos = reader.GetString(1);
-                    Session.dui = reader.GetString(2);
-                    Session.fechaN = reader.GetString(3);
-                    Session.userN = reader.GetString(4);
-                    Session.pass = reader.GetString(5);
-                    Session.tipoUser = reader.GetString(6);
-                    Session.genero = reader.GetString(7);
-                    Session.estadoC = reader.GetString(8);
-                    Session.telefono = reader.GetString(9);
-                    Session.direccion = reader.GetString(10);
+                    Session.id = reader.GetInt64(0);
+                    Session.nombres = reader.GetString(1);
+                    Session.apellidos = reader.GetString(2);
+                    Session.dui = reader.GetString(3);
+                    Session.fechaN = reader.GetString(4);
+                    Session.userN = reader.GetString(5);
+                    Session.pass = reader.GetString(6);
+                    Session.tipoUser = reader.GetString(7);
+                    Session.genero = reader.GetString(8);
+                    Session.estadoC = reader.GetString(9);
+                    Session.telefono = reader.GetString(10);
+                    Session.direccion = reader.GetString(11);
                 }
                 return true;
             }
@@ -113,9 +114,10 @@ namespace BOLTRA_UES.DAL
 
             string sql = "UPDATE Aspirante SET nombres=@nombres, apellidos=@apellidos, dui=@dui," +
                 "fechaN=@fechaN, userN=@userN, pass=@pass, tipoUser=@tipoUser, genero=@genero," +
-                "estadoC=@estadoC, telefono=@telefono, direccion=@direccion";
+                "estadoC=@estadoC, telefono=@telefono, direccion=@direccion WHERE idA = @id";
 
             MySqlCommand comando = new MySqlCommand(sql, conexion);
+            comando.Parameters.AddWithValue("@id", pAspirante.id);
             comando.Parameters.AddWithValue("@nombres", pAspirante.nombres);
             comando.Parameters.AddWithValue("@apellidos", pAspirante.apellidos);
             comando.Parameters.AddWithValue("@dui", pAspirante.dui);
@@ -130,6 +132,43 @@ namespace BOLTRA_UES.DAL
             int resultado = comando.ExecuteNonQuery();
             conexion.Close();
             return resultado;
+        }
+
+        public List<AspiranteEN> RecuperarDatos()
+        {
+            BDComun Conexion = new BDComun();
+
+            MySqlDataReader LeerFilas;
+            MySqlConnection conexion = Conexion.establecerConxion();
+            //conexion.Open();
+            string sql = "SELECT * FROM  Aspirante";
+
+            MySqlCommand comando = new MySqlCommand(sql, conexion);
+            LeerFilas = comando.ExecuteReader();
+
+            List<AspiranteEN> _datosAspirante = new List<AspiranteEN>();
+
+            while (LeerFilas.Read())
+            {
+                _datosAspirante.Add(new AspiranteEN
+                {
+                    id = LeerFilas.GetInt64(0),
+                    nombres = LeerFilas.GetString(1),
+                    apellidos = LeerFilas.GetString(2),
+                    dui = LeerFilas.GetString(3),
+                    fechaN = LeerFilas.GetString(4),
+                    userN = LeerFilas.GetString(5),
+                    pass = LeerFilas.GetString(6),
+                    tipoUser = LeerFilas.GetString(7),
+                    genero = LeerFilas.GetString(8),
+                    estadoC = LeerFilas.GetString(9),
+                    telefono = LeerFilas.GetString(10),
+                    direccion = LeerFilas.GetString(11),
+                });
+
+            }
+            LeerFilas.Close();
+            return _datosAspirante;
         }
     }
 }

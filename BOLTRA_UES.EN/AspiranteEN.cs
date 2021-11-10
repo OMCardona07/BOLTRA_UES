@@ -8,6 +8,7 @@ namespace BOLTRA_UES.EN
 {
     public class AspiranteEN
     {
+        public Int64 id { get; set; }
         public string nombres { get; set; }
         public string apellidos { get; set; }
         public string dui { get; set; }
@@ -22,9 +23,10 @@ namespace BOLTRA_UES.EN
 
         public AspiranteEN() { }
 
-        public AspiranteEN(string pNombres, string pApellidos, string pdui, string pFechaN,
+        public AspiranteEN(Int64 pId, string pNombres, string pApellidos, string pdui, string pFechaN,
             string pUserN, string pPass, string pTipoUser, string pGenero, string pEstadoC, string pTelefono, string pDireccion)
         {
+            id = pId;
             nombres = pNombres;
             apellidos = pApellidos;
             dui = pdui;

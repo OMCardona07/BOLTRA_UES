@@ -70,7 +70,7 @@ namespace BOLTRA_UES.DAL
             MySqlConnection conexion = Conexion.establecerConxion();
             //conexion.Open();
 
-            string sql = "SELECT nombres, apellidos, dui, fechaN, userN, pass," +
+            string sql = "SELECT idAdmin, nombres, apellidos, dui, fechaN, userN, pass," +
                 "tipoUser FROM Administrador WHERE userN= @usuario and pass=  @pass";
 
             MySqlCommand comando = new MySqlCommand(sql, conexion);
@@ -82,13 +82,14 @@ namespace BOLTRA_UES.DAL
             {
                 while (reader.Read())
                 {
-                    Session.nombres = reader.GetString(0);
-                    Session.apellidos = reader.GetString(1);
-                    Session.dui = reader.GetString(2);
-                    Session.fechaN = reader.GetString(3);
-                    Session.userN = reader.GetString(4);
-                    Session.pass = reader.GetString(5);
-                    Session.tipoUser = reader.GetString(6);
+                    Session.id = reader.GetInt64(0);
+                    Session.nombres = reader.GetString(1);
+                    Session.apellidos = reader.GetString(2);
+                    Session.dui = reader.GetString(3);
+                    Session.fechaN = reader.GetString(4);
+                    Session.userN = reader.GetString(5);
+                    Session.pass = reader.GetString(6);
+                    Session.tipoUser = reader.GetString(7);
 
                 }
                 return true;

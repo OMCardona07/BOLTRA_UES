@@ -113,14 +113,18 @@ namespace BOLTRA_UES.Interfaz
         {
             if (txtNombre.Text != "" && txtRubro.Text != "" && txtDescripcion.Text != "")
             {
+                _empresa.id = Convert.ToInt64(txtCodigo.Text);
                 _empresa.nombre = txtNombre.Text.ToUpper();
                 _empresa.rubro = txtRubro.Text.ToUpper();
                 _empresa.descripcion = txtDescripcion.Text.ToUpper();
 
-                _empresasBL.ModificarEmpresa(_empresa);
-                FrmSuccess.confirmacionForm("EL PERFIL FUE \n" + "MODIFICADO CON EXITO");
-                Limpiar();
-                
+                if(_empresa.id != 0)
+                {
+                    _empresasBL.ModificarEmpresa(_empresa);
+                    FrmSuccess.confirmacionForm("EL PERFIL FUE \n" + "MODIFICADO CON EXITO");
+                    Limpiar();
+                    Buscar("");
+                }   
             }
             else
             {

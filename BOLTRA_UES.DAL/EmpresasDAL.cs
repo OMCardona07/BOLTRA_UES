@@ -96,12 +96,13 @@ namespace BOLTRA_UES.DAL
             MySqlConnection conexion = Conexion.establecerConxion();
             //conexion.Open();
 
-            string sql = "UPDATE Aspirante SET nombre=@nombre, rubro=@rubro, descripcion=@descripcion";
+            string sql = "UPDATE empresas SET Nombre=@nombre, Rubro=@rubro, Descripcion=@descripcion WHERE id = @id";
 
             MySqlCommand comando = new MySqlCommand(sql, conexion);
-            comando.Parameters.AddWithValue("@nombres", pAspirante.nombre);
-            comando.Parameters.AddWithValue("@apellidos", pAspirante.rubro);
-            comando.Parameters.AddWithValue("@dui", pAspirante.descripcion);
+            comando.Parameters.AddWithValue("@id", pAspirante.id);
+            comando.Parameters.AddWithValue("@nombre", pAspirante.nombre);
+            comando.Parameters.AddWithValue("@rubro", pAspirante.rubro);
+            comando.Parameters.AddWithValue("@descripcion", pAspirante.descripcion);
             int resultado = comando.ExecuteNonQuery();
             conexion.Close();
             return resultado;

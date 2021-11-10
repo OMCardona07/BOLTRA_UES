@@ -10,13 +10,13 @@ namespace BOLTRA_UES.EN
     {
         public Int64 id { get; set; }
         public string nombre { get; set; }
-        public Int64 idEmpresa { get; set; }
+        public int idEmpresa { get; set; }
         public string descripcion { get; set; }
 
 
         public EmpleoEN() { }
 
-        public EmpleoEN(Int64 pId, string pNombre, Int64 pIdEmpresa, string pDescripcion)
+        public EmpleoEN(Int64 pId, string pNombre, int pIdEmpresa, string pDescripcion)
         {
             id = pId;
             nombre = pNombre;

@@ -30,11 +30,11 @@ namespace BOLTRA_UES.Interfaz
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEmpleo));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.tablaEmpresas = new System.Windows.Forms.DataGridView();
+            this.tablaEmpleos = new System.Windows.Forms.DataGridView();
             this.btnGuardar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -55,7 +55,7 @@ namespace BOLTRA_UES.Interfaz
             this.cbEmpresas = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaEmpresas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaEmpleos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -94,28 +94,28 @@ namespace BOLTRA_UES.Interfaz
             this.pictureBox3.TabIndex = 66;
             this.pictureBox3.TabStop = false;
             // 
-            // tablaEmpresas
+            // tablaEmpleos
             // 
-            this.tablaEmpresas.AllowUserToAddRows = false;
-            this.tablaEmpresas.AllowUserToDeleteRows = false;
-            this.tablaEmpresas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.tablaEmpresas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.tablaEmpresas.BackgroundColor = System.Drawing.Color.White;
-            this.tablaEmpresas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tablaEmpresas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tablaEmpresas.DefaultCellStyle = dataGridViewCellStyle2;
-            this.tablaEmpresas.Location = new System.Drawing.Point(36, 157);
-            this.tablaEmpresas.Name = "tablaEmpresas";
-            this.tablaEmpresas.ReadOnly = true;
-            this.tablaEmpresas.Size = new System.Drawing.Size(590, 350);
-            this.tablaEmpresas.TabIndex = 65;
+            this.tablaEmpleos.AllowUserToAddRows = false;
+            this.tablaEmpleos.AllowUserToDeleteRows = false;
+            this.tablaEmpleos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tablaEmpleos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.tablaEmpleos.BackgroundColor = System.Drawing.Color.White;
+            this.tablaEmpleos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tablaEmpleos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tablaEmpleos.DefaultCellStyle = dataGridViewCellStyle1;
+            this.tablaEmpleos.Location = new System.Drawing.Point(36, 157);
+            this.tablaEmpleos.Name = "tablaEmpleos";
+            this.tablaEmpleos.ReadOnly = true;
+            this.tablaEmpleos.Size = new System.Drawing.Size(590, 350);
+            this.tablaEmpleos.TabIndex = 65;
             // 
             // btnGuardar
             // 
@@ -152,6 +152,7 @@ namespace BOLTRA_UES.Interfaz
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnGuardar.Textcolor = System.Drawing.Color.Black;
             this.btnGuardar.TextFont = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // txtDescripcion
             // 
@@ -299,6 +300,7 @@ namespace BOLTRA_UES.Interfaz
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEliminar.Textcolor = System.Drawing.Color.Black;
             this.btnEliminar.TextFont = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -335,6 +337,7 @@ namespace BOLTRA_UES.Interfaz
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEditar.Textcolor = System.Drawing.Color.Black;
             this.btnEditar.TextFont = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnAgregar
             // 
@@ -382,6 +385,7 @@ namespace BOLTRA_UES.Interfaz
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(543, 22);
             this.txtBuscar.TabIndex = 48;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // pictureBox2
             // 
@@ -419,7 +423,7 @@ namespace BOLTRA_UES.Interfaz
             this.ClientSize = new System.Drawing.Size(1170, 640);
             this.Controls.Add(this.cbEmpresas);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.tablaEmpresas);
+            this.Controls.Add(this.tablaEmpleos);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.pictureBox7);
@@ -445,7 +449,7 @@ namespace BOLTRA_UES.Interfaz
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaEmpresas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaEmpleos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -460,7 +464,7 @@ namespace BOLTRA_UES.Interfaz
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.DataGridView tablaEmpresas;
+        private System.Windows.Forms.DataGridView tablaEmpleos;
         private Bunifu.Framework.UI.BunifuFlatButton btnGuardar;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.PictureBox pictureBox7;

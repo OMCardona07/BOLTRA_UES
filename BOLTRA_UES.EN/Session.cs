@@ -8,6 +8,7 @@ namespace BOLTRA_UES.EN
 {
     public static class Session
     {
+        public static Int64 id { get; set; }
         public static string nombres { get; set; }
         public static string apellidos { get; set; }
         public static string dui { get; set; }

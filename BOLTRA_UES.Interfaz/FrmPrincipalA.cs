@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BOLTRA_UES.DAL;
 using BOLTRA_UES.EN;
+using MySql.Data.MySqlClient;
 
 namespace BOLTRA_UES.Interfaz
 {
@@ -16,6 +18,7 @@ namespace BOLTRA_UES.Interfaz
         public FrmPrincipalA()
         {
             InitializeComponent();
+            obtenerNombreUsuario();
         }
 
         AspiranteEN _aspirante = new AspiranteEN();
@@ -27,10 +30,32 @@ namespace BOLTRA_UES.Interfaz
             this.Location = Screen.PrimaryScreen.WorkingArea.Location;
         }
 
+        public void obtenerNombreUsuario()
+        {
+            BDComun Conexion = new BDComun();
+
+            MySqlDataReader reader;
+            MySqlConnection conexion = Conexion.establecerConxion();
+            //conexion.Open();
+
+            string sql = "SELECT * FROM Aspirante WHERE idA= @idA";
+
+            MySqlCommand comando = new MySqlCommand(sql, conexion);
+            comando.Parameters.AddWithValue("@idA", Session.id);
+            reader = comando.ExecuteReader();
+
+            if (reader.Read())
+            {
+                lblUserName.Text = reader["userN"].ToString();
+                lblBienvenida.Text = reader["userN"].ToString() + " " + "\nBIENVENIDO AL SISTEMA BOLTRA";
+            }
+        }
+
         private void FrmPrincipalA_Load(object sender, EventArgs e)
         {
-            lblUserName.Text = Session.userN;
-            lblBienvenida.Text = Session.userN + " " + "\nBIENVENIDO AL SISTEMA BOLTRA";
+            obtenerNombreUsuario();
+            //lblUserName.Text = Session.userN;
+            //lblBienvenida.Text = Session.userN + " " + "\nBIENVENIDO AL SISTEMA BOLTRA";
         }
 
         //Metodo para que el boton se mantenga en un color mientras este seleccionado
